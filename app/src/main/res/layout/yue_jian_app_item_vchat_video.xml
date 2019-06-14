@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/video_item_layout"
+        android:layout_width="187dp"
+        android:layout_height="@dimen/space_290"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/riv_vchat_bg"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.mingquan.yuejian.widget.YueJianAppStatusTextView
+            android:id="@+id/tv_auth_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_10"
+            android:textSize="@dimen/space_8" />
+
+        <!--<com.mingquan.yuejian.vchat.RoundTextView
+            android:id="@+id/rtv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_7"
+            app:rtv_radius="@dimen/space_8" />-->
+
+        <TextView
+            android:id="@+id/rtv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_12" />
+
+        <TextView
+            android:id="@+id/tv_gift_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_10"
+            android:layout_marginLeft="@dimen/space_10"
+            android:drawableLeft="@drawable/yue_jian_app_icon_01001"
+            android:drawablePadding="@dimen/space_8"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/love_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/space_10"
+            android:layout_marginRight="@dimen/space_10"
+            android:drawableLeft="@drawable/yue_jian_app_icon_01002"
+            android:drawablePadding="@dimen/space_8"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/vchat_item_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/yue_jian_app_vchat_item_mask"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_add"
+        android:layout_width="187dp"
+        android:layout_height="@dimen/space_290"
+        android:background="@drawable/yue_jian_app_icon_plus"/>
+</RelativeLayout>

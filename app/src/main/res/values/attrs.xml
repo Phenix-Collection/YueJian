@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="YueJianAppRoundedTextView">
+        <attr name="rtvBgColor" format="color" />
+        <attr name="rtvBorderWidth" format="dimension" />
+        <attr name="rtvBorderColor" format="color" />
+        <attr name="rtvRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="YueJianAppRoundTextView">
+        <attr name="rtv_bg_color" format="color" />
+        <attr name="rtv_border_width" format="dimension" />
+        <attr name="rtv_border_color" format="dimension" />
+        <attr name="rtv_radius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="YueJianAppCircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppChatImageView">
+        <attr name="corner_position">
+            <enum name="left" value="1" />
+            <enum name="right" value="0" />
+        </attr>
+        <attr name="border_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppPagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPaddingTopBottom" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <!--该属性表示里面的TAB是否均分整个PagerSlidingTabStrip控件的宽,true是,false不均分,从左到右排列,默认false-->
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsTextSelectedColor" format="color" />
+        <!--缩放的最大值,0.3表示放大后最大是原来的0.3倍,默认未0.3-->
+        <attr name="pstsScaleZoomMax" format="float" />
+        <attr name="pstsSmoothScrollWhenClickTab" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppabsProgressBar">
+        <attr name="progress_" format="integer" />
+        <attr name="backgroundColor_" format="reference|color" />
+        <attr name="textColor_" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppprogressBar">
+        <attr name="startFillColor_" format="reference|color" />
+        <attr name="middleFillColor_" format="reference|color" />
+        <attr name="endFillColor_" format="reference|color" />
+        <attr name="arrowPointColor_" format="reference|color" />
+        <attr name="arrowPointRadius_" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppcircleProgressBar">
+        <attr name="textSize_" format="dimension|reference" />
+        <attr name="progressWidth_" format="dimension|reference" />
+        <attr name="smallCircleColor_" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppfloatTextProgressBar">
+        <attr name="triangleColor_" format="reference|color" />
+        <attr name="rectColor_" format="reference|color" />
+        <attr name="fillColor_" format="reference|color" />
+    </declare-styleable>
+
+    <!--圆角水平进度条-->
+    <declare-styleable name="YueJianAppXHorizontalProgressBar">
+        <attr name="backgroundColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="valueTextColor" format="color" />
+        <attr name="isRoundRect" format="boolean" />
+        <attr name="radius" format="dimension" />
+        <attr name="showTextProgress" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppCircleColorView">
+        <attr name="firstColor" format="color"></attr>
+        <attr name="secondColor" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppAVLoadingIndicatorView">
+        <attr name="indicator">
+            <flag name="LineSpinFadeLoader" value="23" />
+        </attr>
+        <attr name="xindicator_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="YueJianAppXTemplateTitle">
+        <!-- 标题文案 -->
+        <attr name="title_text" format="string" />
+        <attr name="title_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="YueJianAppSlideShowView">
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="YueJianAppLabelGroup">
+        <attr name="selectType" format="integer|reference" />
+        <attr name="maxSelect" format="integer|reference" />
+        <attr name="labelTextColor" format="color|reference" />
+        <attr name="labelTextSize" format="dimension|reference" />
+        <attr name="labelTextPaddingLeft" format="dimension|reference" />
+        <attr name="labelTextPaddingTop" format="dimension|reference" />
+        <attr name="labelTextPaddingRight" format="dimension|reference" />
+        <attr name="labelTextPaddingBottom" format="dimension|reference" />
+        <attr name="lineMargin" format="dimension|reference" />
+        <attr name="wordMargin" format="dimension|reference" />
+        <attr name="labelBackground" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="XRoundImageView">
+        <attr name="xriv_is_circle" format="boolean" />
+        <attr name="xriv_is_cover_src" format="boolean" />
+        <attr name="xriv_corner_radius" format="dimension" />
+        <attr name="xriv_corner_top_left_radius" format="dimension" />
+        <attr name="xriv_corner_top_right_radius" format="dimension" />
+        <attr name="xriv_corner_bottom_left_radius" format="dimension" />
+        <attr name="xriv_corner_bottom_right_radius" format="dimension" />
+        <attr name="xriv_border_width" format="dimension" />
+        <attr name="xriv_border_color" format="color" />
+        <attr name="xriv_inner_border_width" format="dimension" />
+        <attr name="xriv_inner_border_color" format="color" />
+        <attr name="xriv_mask_color" format="color" />
+    </declare-styleable>
+
+</resources>

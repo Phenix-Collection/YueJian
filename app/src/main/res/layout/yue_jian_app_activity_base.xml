@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/local_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/local_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/remote_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<SurfaceView-->
+        <!--android:id="@+id/remote_video_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+    </RelativeLayout>
+
+    <!--关闭摄像头-->
+    <LinearLayout
+        android:id="@+id/ll_close_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="31dp"
+        android:layout_marginLeft="40dp"
+        android:onClick="onClick"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/yue_jian_app_vchat_close_camera" />
+
+        <TextView
+            android:id="@+id/tv_camera_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_12"
+            android:text="关闭摄像头"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!--结束通话-->
+    <LinearLayout
+        android:id="@+id/ll_end_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
+        android:onClick="onClick"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_call_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/space_15"
+            android:text="99:99"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_14" />
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/yue_jian_app_vchat_end_call" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_12"
+            android:text="挂断"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!--切换摄像头-->
+    <LinearLayout
+        android:id="@+id/ll_switch_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="31dp"
+        android:layout_marginRight="40dp"
+        android:onClick="onClick"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/yue_jian_app_vchat_switch_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_12"
+            android:padding="@dimen/space_2"
+            android:text="切换摄像头"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/space_150"
+        android:layout_marginRight="@dimen/space_14"
+        android:drawablePadding="@dimen/space_2"
+        android:drawableTop="@drawable/yue_jian_app_gift"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="送礼物"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12" />
+
+    <!--礼物提示-->
+    <LinearLayout
+        android:id="@+id/gift_tips"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_160"
+        android:layout_marginTop="@dimen/space_150"
+        android:clickable="false"
+        android:orientation="vertical" />
+
+    <!--pre chat layout-->
+    <RelativeLayout
+        android:id="@+id/rl_vchat_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!--background-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/yue_jian_app_icon_14001" />
+
+        <!--头像 支付信息-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="188dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:layout_gravity="center_horizontal">
+
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/vchat_avatar"
+                    android:layout_width="82dp"
+                    android:layout_height="82dp"
+                    android:src="@drawable/yue_jian_app_default_head"
+                    app:border_color="@color/white"
+                    app:border_width="@dimen/space_1" />
+
+                <ImageView
+                    android:id="@+id/iv_icon_vip"
+                    android:layout_width="24.5dp"
+                    android:layout_height="24.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/yue_jian_app_icon_vip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_vchat_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_12"
+                android:text="名字名字"
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_25" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_12"
+                android:text="正在接通视频聊天"
+                android:textColor="#a58ed2"
+                android:textSize="@dimen/space_14" />
+
+            <TextView
+                android:id="@+id/cost_unit"
+                android:layout_width="160dp"
+                android:layout_height="@dimen/space_26"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_12"
+                android:background="@drawable/yue_jian_app_icon_14004"
+                android:gravity="center"
+                android:text="每分钟支付99V币"
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_14" />
+
+            <ImageView
+                android:id="@+id/iv_mystery_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_12"
+                android:background="@drawable/yue_jian_app_vchat_mystery_unopen"
+                android:onClick="onClick" />
+        </LinearLayout>
+
+        <!--拒绝、接受按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_36"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_refuse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="63dp"
+                    android:layout_height="63dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/yue_jian_app_vchat_end_call" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_14"
+                    android:text="拒绝"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_vchat_accept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="63dp"
+                    android:layout_height="63dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/yue_jian_app_vchat_call" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_14"
+                    android:text="接受"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/yue_jian_app_loading"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/space_11"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_build_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_14"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_8" />
+
+        <TextView
+            android:id="@+id/tv_target_uid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_14"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_8" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="186dp"
+        android:layout_marginLeft="@dimen/space_14"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_open_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yue_jian_app_icon_no_camera"
+            android:onClick="onClick" />
+
+        <ImageView
+            android:id="@+id/iv_open_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_23"
+            android:background="@drawable/yue_jian_app_icon_no_audio"
+            android:onClick="onClick" />
+    </LinearLayout>
+</RelativeLayout>

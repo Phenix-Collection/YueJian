@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.mingquan.yuejian.vchat.YueJianAppXTemplateTitle
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        app:title_text="我的时长" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="@dimen/space_5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_call_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40"
+            android:gravity="center"
+            android:text="12月24日 13:06"
+            android:textColor="@color/vchat_919191"
+            android:textSize="@dimen/sp_12" />
+
+        <RelativeLayout
+            android:layout_width="325dp"
+            android:layout_height="158dp"
+            android:layout_gravity="center"
+            android:background="@drawable/yue_jian_app_my_package_bg"
+            android:elevation="2dp">
+            <!--date -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="通话时长"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/space_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="12月24日"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-19"
+                    android:textColor="#4e80f7"
+                    android:textSize="@dimen/space_17" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:text="分钟"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/space_292"
+                android:layout_height="@dimen/space_1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/space_40"
+                android:background="#eaeaea" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/space_292"
+                android:layout_height="@dimen/space_40"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="累计时长222小时"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/space_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="@dimen/space_5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40"
+            android:gravity="center"
+            android:text="12月24日 13:06"
+            android:textColor="@color/vchat_919191"
+            android:textSize="@dimen/sp_12" />
+
+        <RelativeLayout
+            android:layout_width="325dp"
+            android:layout_height="158dp"
+            android:layout_gravity="center"
+            android:background="@drawable/yue_jian_app_my_package_bg"
+            android:elevation="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="待机时长"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/space_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_5"
+                    android:text="12月24日"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-19"
+                    android:textColor="#4e80f7"
+                    android:textSize="@dimen/space_17" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:text="分钟"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/space_12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/space_292"
+                android:layout_height="@dimen/space_1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/space_40"
+                android:background="#eaeaea" />
+
+            <TextView
+                android:layout_width="@dimen/space_292"
+                android:layout_height="@dimen/space_40"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:text="累计时长222小时"
+                android:textColor="@color/vchat_919191"
+                android:textSize="@dimen/space_12" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

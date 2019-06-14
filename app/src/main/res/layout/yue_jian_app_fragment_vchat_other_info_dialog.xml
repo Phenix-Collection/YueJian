@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6d6d6">
+
+    <com.lzy.widget.HeaderViewPager
+        android:id="@+id/scrollable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:hvp_topOffset="50dp">
+        <!-- scrollable layout -->
+        <include layout="@layout/yue_jian_app_vchat_other_info_top_view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_5"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_56">
+
+            <RelativeLayout
+                android:layout_width="@dimen/space_400"
+                android:layout_height="@dimen/space_50"
+                android:layout_gravity="center_horizontal">
+
+                <com.ruffian.library.RVPIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="@dimen/space_400"
+                    android:layout_height="@dimen/space_47"
+                    android:layout_marginBottom="@dimen/space_3"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    app:indicator_color="@color/home_pink"
+                    app:indicator_height="3dp"
+                    app:indicator_style="line"
+                    app:indicator_visible_count="2"
+                    app:indicator_width="@dimen/space_14"
+                    app:style_line_padding="@dimen/space_93"
+                    app:text_color_normal="#565656"
+                    app:text_color_selected="@color/home_pink"
+                    app:text_size="@dimen/sp_14" />
+
+                <View
+                    android:layout_width="@dimen/space_1"
+                    android:layout_height="@dimen/space_12"
+                    android:layout_centerInParent="true"
+                    android:background="#cccccc" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:background="#d6d6d6" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0.5dp" />
+        </LinearLayout>
+    </com.lzy.widget.HeaderViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_60">
+
+        <View
+            android:id="@+id/top_bar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_14"
+                android:padding="@dimen/space_6"
+                android:src="@drawable/yue_jian_app_btn_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="名字名字"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--bottom view-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_56"
+        android:layout_gravity="bottom"
+        android:background="@color/view_line"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/space_11">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/space_2"
+            android:drawableTop="@drawable/yue_jian_app_message"
+            android:gravity="center"
+            android:text="私信"
+            android:textColor="#565656"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv_gift"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/space_2"
+            android:drawableTop="@drawable/yue_jian_app_gift"
+            android:gravity="center"
+            android:text="送礼物"
+            android:textColor="@color/vchat_565656"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/iv_to_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/yue_jian_app_icon_04007" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/space_60"
+        android:layout_marginRight="@dimen/space_14"
+        android:background="@drawable/yue_jian_app_icon_hi"
+        android:visibility="gone" />
+
+    <!--礼物提示-->
+    <LinearLayout
+        android:id="@+id/gift_tips"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_160"
+        android:layout_marginTop="@dimen/space_150"
+        android:clickable="false"
+        android:orientation="vertical" />
+
+    <ImageView
+        android:id="@+id/iv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/yue_jian_app_loading"
+        android:visibility="gone" />
+
+</FrameLayout>

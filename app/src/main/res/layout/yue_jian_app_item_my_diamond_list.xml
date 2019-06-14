@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="@dimen/space_5"
+            android:orientation="vertical">
+
+            <!--time-->
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_40"
+                android:gravity="center"
+                android:text="12月24日 13:06"
+                android:textColor="@color/vchat_919191"
+                android:textSize="@dimen/sp_12" />
+
+            <RelativeLayout
+                android:elevation="2dp"
+                android:layout_width="325dp"
+                android:layout_height="158dp"
+                android:background="@drawable/yue_jian_app_my_package_bg"
+                android:layout_gravity="center">
+                <!--date -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:layout_marginTop="@dimen/space_15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的明细"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/space_14" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        android:textColor="@color/vchat_919191"
+                        android:textSize="@dimen/space_12" />
+                </LinearLayout>
+
+                <!--diamond-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_pay_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4e80f7"
+                        android:textSize="@dimen/space_17" />
+
+                    <TextView
+                        android:id="@+id/tv_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:textColor="@color/vchat_919191"
+                        android:textSize="@dimen/space_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/space_292"
+                    android:layout_height="@dimen/space_1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/space_40"
+                    android:background="#eaeaea" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/space_292"
+                    android:layout_height="@dimen/space_40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/tv_pay_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textColor="@color/vchat_919191"
+                        android:textSize="@dimen/space_12" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                            android:id="@+id/broadcast_avatar"
+                            android:layout_width="@dimen/space_26"
+                            android:layout_height="@dimen/space_26"
+                            android:layout_marginRight="@dimen/space_5"
+                            android:background="@drawable/yue_jian_app_default_head" />
+
+                        <TextView
+                            android:id="@+id/tv_broadcast_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/vchat_919191"
+                            android:textSize="@dimen/space_12" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

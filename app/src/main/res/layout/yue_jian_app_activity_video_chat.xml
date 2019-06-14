@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mingquan.yuejian.vchat.VideoChatActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/remote_video_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <FrameLayout
+            android:id="@+id/local_video_view_container"
+            android:layout_width="80dp"
+            android:layout_height="142dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/black" />
+
+        <!--关闭摄像头-->
+        <LinearLayout
+            android:id="@+id/ll_close_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_20"
+            android:layout_marginLeft="@dimen/space_20"
+            android:onClick="onLocalAudioMuteClicked"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/space_60"
+                android:layout_height="@dimen/space_60"
+                android:background="@drawable/yue_jian_app_vchat_close_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/space_2"
+                android:text="关闭摄像头"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!--结束通话-->
+        <LinearLayout
+            android:id="@+id/ll_end_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/space_20"
+            android:onClick="onEncCallClicked"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_call_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/space_30"
+                android:padding="@dimen/space_2"
+                android:text="已耗时:99:99"
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_20" />
+
+            <ImageView
+                android:layout_width="@dimen/space_67"
+                android:layout_height="@dimen/space_67"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/yue_jian_app_vchat_end_call" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/space_2"
+                android:text="拒绝"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!--切换摄像头-->
+        <LinearLayout
+            android:id="@+id/ll_switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/space_20"
+            android:layout_marginRight="@dimen/space_20"
+            android:onClick="onSwitchCameraClicked"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/space_60"
+                android:layout_height="@dimen/space_60"
+                android:background="@drawable/yue_jian_app_vchat_switch_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/space_2"
+                android:text="切换摄像头"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--pre chat layout-->
+    <RelativeLayout
+        android:id="@+id/rl_vchat_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!--background-->
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/yue_jian_app_icon_14001" />
+
+        <!--头像 支付信息-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_200"
+            android:orientation="vertical">
+
+            <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                android:id="@+id/vchat_avatar"
+                android:layout_width="@dimen/space_100"
+                android:layout_height="@dimen/space_100"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/yue_jian_app_default_head"
+                app:border_color="@color/white"
+                app:border_width="@dimen/space_2" />
+
+            <TextView
+                android:id="@+id/tv_vchat_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_10"
+                android:text="名字名字"
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_10"
+                android:text="向你发起视频聊天..."
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_12" />
+
+            <TextView
+                android:id="@+id/cost_unit"
+                android:layout_width="139dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_10"
+                android:background="@drawable/yue_jian_app_vchat_text_bg"
+                android:gravity="center"
+                android:text="每分钟支付99V币"
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_12" />
+        </LinearLayout>
+
+        <!--拒绝、接受按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_20"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_refuse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRefuseVChat"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/space_67"
+                    android:layout_height="@dimen/space_67"
+                    android:layout_gravity="center"
+                    android:background="@drawable/yue_jian_app_vchat_end_call" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:text="拒绝"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_vchat_accept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onAcceptVChat"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/space_67"
+                    android:layout_height="@dimen/space_67"
+                    android:layout_gravity="center"
+                    android:background="@drawable/yue_jian_app_vchat_call" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:text="接受"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

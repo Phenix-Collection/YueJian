@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/space_3"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/space_10" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_5"
+        android:layout_marginTop="@dimen/space_5">
+
+        <com.mingquan.yuejian.widget.YueJianAppAvatarView
+            android:id="@+id/av_message_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_5" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_40"
+            android:background="@drawable/yue_jian_app_right_chat_bg">
+
+            <TextView
+                android:id="@+id/tv_message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:gravity="center|left"
+                android:maxWidth="225.0dip"
+                android:padding="@dimen/space_1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_13" />
+
+            <com.mingquan.yuejian.widget.YueJianAppLoadUrlImageView
+                android:id="@+id/iv_message_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_message_text" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

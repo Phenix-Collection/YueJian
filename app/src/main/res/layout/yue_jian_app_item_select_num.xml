@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:id="@+id/rl_item"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginLeft="@dimen/space_14"
+            android:layout_marginRight="@dimen/space_14"
+            android:background="@drawable/yue_jian_app_my_package_bg">
+
+            <TextView
+                android:id="@+id/tv_item_diamond_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_14"
+                android:drawableLeft="@drawable/yue_jian_app_ico_diamond"
+                android:drawablePadding="@dimen/space_2"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/vchat_565656"
+                android:textSize="@dimen/space_14" />
+
+            <TextView
+                android:id="@+id/tv_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_14"
+                android:layout_toRightOf="@id/tv_item_diamond_num"
+                android:gravity="center"
+                android:textColor="#d77cf6"
+                android:textSize="@dimen/space_14" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_14"
+                android:gravity="center"
+                android:textColor="#d77cf6"
+                android:textSize="@dimen/space_14" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_selected"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/space_14"
+            android:layout_marginRight="@dimen/space_14"
+            android:background="@drawable/yue_jian_app_recharge_002"
+            android:visibility="gone" />
+
+        <ImageView
+            android:elevation="2dp"
+            android:id="@+id/iv_ribbon"
+            android:layout_width="@dimen/space_45"
+            android:layout_height="@dimen/space_45"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_1" />
+    </RelativeLayout>
+</LinearLayout>

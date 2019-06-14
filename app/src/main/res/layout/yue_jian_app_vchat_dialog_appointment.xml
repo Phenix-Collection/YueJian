@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="296dp"
+        android:layout_height="243dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_140">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/yue_jian_app_vchat_dialog_general_bg"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="@dimen/space_220"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="大V暂时无法接通"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="@dimen/space_220"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="请稍后再拨，或者立即预约Ta"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_25">
+
+                <ImageView
+                    android:id="@+id/iv_appointment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yue_jian_app_icon_05001" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="预约Ta"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_20" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="@dimen/space_220"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_30"
+                android:layout_marginTop="@dimen/space_14"
+                android:gravity="center"
+                android:text="预约将收取1分钟的预约费，大V成功回拨或24小时未回拨都将返还预约金"
+                android:textColor="@color/vchat_696969"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_15"
+            android:background="@drawable/yue_jian_app_icon_close" />
+    </RelativeLayout>
+
+    <com.mingquan.yuejian.widget.YueJianAppAvatarView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/space_80"
+        android:layout_height="@dimen/space_80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_100"
+        android:elevation="@dimen/space_2"
+        android:src="@drawable/yue_jian_app_default_head"/>
+
+</RelativeLayout>

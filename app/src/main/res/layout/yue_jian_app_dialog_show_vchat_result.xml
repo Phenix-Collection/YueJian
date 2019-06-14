@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_50"
+        android:background="@drawable/yue_jian_app_vchat_dialog_result_bg">
+
+        <RelativeLayout
+            android:id="@+id/rl_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_42"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_15"
+                android:drawableLeft="@drawable/yue_jian_app_icon_12008"
+                android:drawablePadding="@dimen/space_6"
+                android:text="举报"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/space_15"
+                android:background="@drawable/yue_jian_app_icon_12009" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_top_bar"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingRight="@dimen/space_10">
+
+            <!-- 头像 昵称 星级-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_70">
+
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/space_38"
+                    android:layout_height="@dimen/space_38"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/yue_jian_app_default_head" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:layout_toRightOf="@id/avatar"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="名字名字"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/space_14" />
+
+                    <com.mingquan.yuejian.ui.view.YueJianAppMyRatingBar
+                        android:id="@+id/rating_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_5"
+                        app:clickable="false"
+                        app:starCount="5"
+                        app:starFill="@drawable/yue_jian_app_vchat_star"
+                        app:starImageSize="@dimen/space_14" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--通话 消费 亲密值-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_55"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_5"
+                        android:background="@drawable/yue_jian_app_icon_12003" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/space_10"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="通话：00分钟"
+                            android:textColor="@color/vchat_696969"
+                            android:textSize="@dimen/sp_12" />
+
+                        <TextView
+                            android:id="@+id/tv_diamond"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_5"
+                            android:text="消费：00钻石"
+                            android:textColor="@color/vchat_696969"
+                            android:textSize="@dimen/sp_12" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_love_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/yue_jian_app_icon_12002"
+                        android:drawablePadding="@dimen/space_10"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="本次亲密值：0"
+                        android:textColor="@color/vchat_696969"
+                        android:textSize="@dimen/sp_12" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!-- 对TA的感觉-->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_105"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:text="我对TA的感觉是"
+                    android:textColor="@color/vchat_696969"
+                    android:textSize="@dimen/space_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/yue_jian_app_icon_12004"
+                        android:gravity="center"
+                        android:text="无爱"
+                        android:textColor="@color/vchat_919191"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/yue_jian_app_icon_12007"
+                        android:gravity="center"
+                        android:text="喜爱"
+                        android:textColor="@color/vchat_ea4579"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--我的评价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:text="我的评价是"
+                    android:textColor="@color/vchat_696969"
+                    android:textSize="@dimen/space_14" />
+
+                <com.mingquan.yuejian.vchat.YueJianAppLabelGroup
+                    android:id="@+id/label_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/space_5"
+                    app:labelTextPaddingBottom="4dp"
+                    app:labelTextPaddingLeft="8dp"
+                    app:labelTextPaddingRight="8dp"
+                    app:labelTextPaddingTop="4dp"
+                    app:labelTextSize="@dimen/sp_11"
+                    app:lineMargin="10dp"
+                    app:selectType="2"
+                    app:wordMargin="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:layout_below="@id/ll_detail"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_18" />
+    </RelativeLayout>
+</RelativeLayout>

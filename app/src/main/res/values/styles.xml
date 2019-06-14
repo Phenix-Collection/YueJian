@@ -1,0 +1,252 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:homeAsUpIndicator">@drawable/yue_jian_app_btn_back</item>
+        <item name="actionBarStyle">@style/MyActionBarStyle</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">false</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@color/transparent_blank</item>
+    </style>
+
+    <style name="main_menu_photo_anim">
+        <item name="android:windowEnterAnimation">@anim/yue_jian_app_anim_photo_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/yue_jian_app_anim_photo_dialog_out</item>
+    </style>
+
+    <!--<item name="android:windowIsTranslucent">true</item>-->
+    <!-- Customize your theme here. -->
+
+    <style name="MyActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <!-- Support library compatibility -->
+        <!--解决左边一直有一块边距的问题 contentInsetStart = 0 -->
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+    </style>
+    <!-- 操作项样式 start -->
+    <style name="option_item_rl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/space_50</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/space_14</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="vchat_option_item_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">#696969</item>
+    </style>
+
+
+    <!-- viewpage文本  滑动标签标题 -->
+    <!-- 加载滚动条样式 -->
+
+    <color name="globalback">#F7F5F5</color>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@drawable/yue_jian_app_dialog_background</item>
+        <item name="android:windowBackground">@drawable/yue_jian_app_dialog_background</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <style name="dialog_confirm" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@drawable/yue_jian_app_dialog_background</item>
+        <item name="android:windowBackground">@drawable/yue_jian_app_dialog_background</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="dialog_vChat" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--dialog fragment-->
+    <style name="CustomDialog" parent="@android:style/Theme">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowEnterAnimation">@anim/yue_jian_app_anim_pop_show</item>
+        <item name="android:windowExitAnimation">@anim/yue_jian_app_anim_pop_exit</item>
+    </style>
+
+    <style name="dialog_show_exit">
+        <item name="android:windowEnterAnimation">@anim/yue_jian_app_anim_slide_in_from_top</item>
+        <item name="android:windowExitAnimation">@anim/yue_jian_app_anim_slide_out_to_bottom</item>
+    </style>
+
+    <!--从底部进来，底部出去-->
+    <style name="dialog_bottom_enter_bottom_exit">
+        <item name="android:windowEnterAnimation">@anim/yue_jian_app_anim_slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/yue_jian_app_anim_slide_out_to_bottom</item>
+    </style>
+
+    <style name="baseTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/location_color</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+
+    </style>
+
+    <style name="baseEditTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:lines">1</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColorHint">@color/hint_gray</item>
+    </style>
+
+    <style name="bigTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_15</item>
+
+    </style>
+
+    <style name="loginTextStyle" parent="baseTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginLeft">@dimen/space_10</item>
+    </style>
+
+    <style name="loginItemStyle">
+        <item name="android:background">@drawable/yue_jian_app_login_view_item_frame</item>
+        <item name="android:layout_width">245dp</item>
+        <item name="android:layout_height">41dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@dimen/space_12</item>
+
+    </style>
+
+    <style name="loginItemImgStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/space_55</item>
+        <item name="android:layout_centerVertical">true</item>
+
+    </style>
+
+
+    <!--ActionBar的style-->
+
+    <!-- 自定义仿IOS的ActionSheet底部Dialog的样式 ，有模糊效果 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/yue_jian_app_anim_actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/yue_jian_app_anim_actionsheet_dialog_out</item>
+    </style>
+
+
+    <!--自定义Dialog样式-->
+
+    <!-- Loding_dialog样式Start -->
+    <style name="Dialog_bocop">
+        <item name="android:windowBackground">@color/bocop_dialog_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <!-- Loding_dialog样式Start -->
+
+    <style name="collect_progress">
+        <item name="android:indeterminateDrawable">@drawable/yue_jian_app_rotate_collect_progressbar</item>
+        <item name="android:minWidth">20dip</item>
+        <item name="android:maxWidth">20dip</item>
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+    <style name="alpha_in">
+        <item name="android:windowAnimationStyle">@anim/yue_jian_app_anim_alpha_in</item>
+    </style>
+
+    <!-- 带动画的底部弹出dialog fragment-->
+
+    <!--  这个是加入的代码 -->
+
+    <style name="FullScreenModeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <!-- 虚拟按键不透明 -->
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="FullScreenModeFragment" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <!-- 虚拟按键不透明 -->
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+    </style>
+
+    <declare-styleable name="YueJianAppStrokeTextView">
+        <attr name="innnerColor" format="color" />
+        <attr name="outerColor" format="color" />
+        <attr name="strokeW" format="integer" />
+    </declare-styleable>
+
+    <style name="AppStartTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/yue_jian_app_app_start_bg</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+    </style>
+
+    <declare-styleable name="YueJianAppMyRatingBar">
+        <attr name="starImageSize" format="dimension" />
+        <attr name="starCount" format="integer" />
+        <attr name="starEmpty" format="reference" />
+        <attr name="starFill" format="reference" />
+        <attr name="halfFill" format="reference" />
+        <attr name="clickable" format="boolean" />
+        <attr name="marginRightSize" format="dimension" />
+    </declare-styleable>
+</resources>

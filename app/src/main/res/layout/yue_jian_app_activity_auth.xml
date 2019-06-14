@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.mingquan.yuejian.vchat.YueJianAppXTemplateTitle
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        app:title_text="成为认证大V" />
+
+    <ImageView
+        android:layout_width="148dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="@dimen/space_50"
+        android:background="@drawable/yue_jian_app_icon_05002" />
+
+    <ImageView
+        android:layout_width="88dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="@dimen/space_5"
+        android:background="@drawable/yue_jian_app_icon_05003" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:text="成为视频大V"
+        android:textColor="@color/black"
+        android:textSize="@dimen/space_18" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="让你的世界为你和他人创造更多价值" />
+
+    <Button
+        android:id="@+id/btn_to_auth"
+        android:layout_width="230dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="@dimen/space_40"
+        android:background="@drawable/yue_jian_app_icon_05001"
+        android:text="开始认证"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+    <TextView
+        android:layout_marginTop="@dimen/space_140"
+        android:text="认证即代表你已同意《浪花视频绿色直播承诺书》"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_10"/>
+</LinearLayout>

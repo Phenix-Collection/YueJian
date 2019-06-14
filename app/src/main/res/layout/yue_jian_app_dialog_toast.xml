@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yue_jian_app_shape_toast_dialog_bg"
+        android:minHeight="60dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_15">
+
+            <ProgressBar
+                android:id="@+id/pb_collect"
+                style="@style/collect_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:text="正在加载..."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

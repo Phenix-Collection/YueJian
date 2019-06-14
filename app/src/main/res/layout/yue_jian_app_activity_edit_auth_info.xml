@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mingquan.yuejian.auth.EditAuthInfoActivity">
+
+    <com.mingquan.yuejian.vchat.YueJianAppXTemplateTitle
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        app:title_text="编辑认证资料" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcv_picture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/vchat_f6f6f6"
+                android:overScrollMode="never"
+                android:padding="@dimen/space_5" />
+
+            <!--昵称-->
+            <LinearLayout
+                android:id="@+id/ll_name"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="昵称" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请输入昵称（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--手机号码-->
+            <LinearLayout
+                android:id="@+id/ll_phone_num"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="手机号码" />
+
+                <TextView
+                    android:id="@+id/tv_phone_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请输入手机号（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--身份证号-->
+            <LinearLayout
+                android:id="@+id/ll_id_card"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="身份证号" />
+
+                <TextView
+                    android:id="@+id/tv_id_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请输入身份证号（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                style="@style/vchat_line"
+                android:visibility="gone" />
+
+            <!--身高-->
+            <LinearLayout
+                android:id="@+id/ll_height"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="身高" />
+
+                <TextView
+                    android:id="@+id/tv_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请设置身高（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--体重-->
+            <LinearLayout
+                android:id="@+id/ll_weight"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="体重" />
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请设置体重（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--星座-->
+            <LinearLayout
+                android:id="@+id/ll_sign"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="星座" />
+
+                <TextView
+                    android:id="@+id/tv_sign"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请设置星座（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--城市-->
+            <LinearLayout
+                android:id="@+id/ll_city"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="所在城市" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请设置城市（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--个人介绍-->
+            <LinearLayout
+                android:id="@+id/ll_my_intro"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="个人介绍" />
+
+                <TextView
+                    android:id="@+id/tv_my_intro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请编辑个人介绍（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--形象标签-->
+            <LinearLayout
+                android:id="@+id/ll_labels"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="形象标签" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_labels"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="@dimen/space_5"
+                        android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                        android:gravity="right|center_vertical"
+                        android:text="请设置形象标签（必填）"
+                        android:textColor="@color/vchat_919191"
+                        android:textSize="@dimen/sp_14" />
+
+                    <com.mingquan.yuejian.vchat.YueJianAppLabelGroup
+                        android:id="@+id/label_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/space_24"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/space_30"
+                        app:labelTextPaddingBottom="4dp"
+                        app:labelTextPaddingLeft="8dp"
+                        app:labelTextPaddingRight="8dp"
+                        app:labelTextPaddingTop="4dp"
+                        app:labelTextSize="@dimen/sp_11"
+                        app:lineMargin="10dp"
+                        app:selectType="1"
+                        app:wordMargin="5dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--个人签名-->
+            <LinearLayout
+                android:id="@+id/ll_signature"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="个人签名" />
+
+                <TextView
+                    android:id="@+id/tv_signature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="请设置个人签名（必填）"
+                    android:textColor="@color/vchat_919191"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <Button
+                android:id="@+id/btn_auth"
+                android:layout_width="230dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_20"
+                android:background="@drawable/yue_jian_app_icon_05001"
+                android:enabled="true"
+                android:text="提交认证申请"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/space_20"
+                android:text="严禁上传任何违反国家法律法规内容" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

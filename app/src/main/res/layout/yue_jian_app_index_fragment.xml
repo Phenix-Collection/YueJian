@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/home_search"
+        android:layout_width="@dimen/space_50"
+        android:layout_height="@dimen/space_44"
+        android:layout_marginLeft="@dimen/space_5"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/yue_jian_app_icon_11009" />
+
+    <com.ruffian.library.RVPIndicator
+        android:id="@+id/app_indicator"
+        android:layout_width="267dp"
+        android:layout_height="@dimen/space_44"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:indicator_color="@color/home_pink"
+        app:indicator_height="3dp"
+        app:indicator_style="line"
+        app:indicator_visible_count="3"
+        app:indicator_width="@dimen/space_14"
+        app:style_line_padding="37dp"
+        app:text_color_normal="@color/home_grey"
+        app:text_color_selected="@color/home_pink"
+        app:text_size="@dimen/sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_0_5"
+        android:layout_below="@id/app_indicator"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_below="@id/home_search"
+        android:id="@+id/ll_notify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_30"
+        android:background="@color/pinkColor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_12"
+        android:paddingRight="@dimen/space_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="打开通知，不要错过任何重要信息哦"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_12" />
+
+        <TextView
+            android:id="@+id/tv_ignore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="忽略"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_12" />
+
+        <View
+            android:layout_width="@dimen/space_1"
+            android:layout_height="@dimen/space_16"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/space_5"
+            android:layout_marginRight="@dimen/space_5"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_open_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="打开"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_12" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/child_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_notify"
+        android:layout_marginTop="1dp" />
+
+</RelativeLayout>

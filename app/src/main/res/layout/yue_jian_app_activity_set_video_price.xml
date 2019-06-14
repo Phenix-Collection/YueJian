@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mingquan.yuejian.vchat.SetVideoPriceActivity">
+
+    <com.mingquan.yuejian.vchat.YueJianAppXTemplateTitle
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        app:title_text="设定价格" />
+
+    <EditText
+        android:maxLength="2"
+        android:numeric="integer"
+        android:id="@+id/et_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_100"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="请输入设定价格" />
+
+    <View
+        style="@style/vchat_line"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginRight="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_10" />
+
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_30"
+        android:background="@drawable/yue_jian_app_vchat_bind_button_bg_selector"
+        android:text="提交"
+        android:textColor="@color/white" />
+</LinearLayout>

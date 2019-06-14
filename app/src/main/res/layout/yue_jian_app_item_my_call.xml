@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_72"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_15"
+            android:paddingRight="@dimen/space_15">
+
+            <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                android:id="@+id/av_user_head"
+                android:layout_width="@dimen/space_50"
+                android:layout_height="@dimen/space_50"
+                android:src="@drawable/yue_jian_app_default_head" />
+
+            <!--消息， 名字-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_15"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/space_14"
+                    android:text="名字名字" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/private_chat_msg"
+                    android:textSize="@dimen/space_12"
+                    android:text="通话时长 00：00：00（支出19钻石）" />
+            </LinearLayout>
+
+            <!--日期，时间-->
+            <LinearLayout
+                android:layout_width="@dimen/space_60"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/baseTextStyle"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/private_chat_msg"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="12月30日" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/baseTextStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/space_15"
+                    android:textColor="@color/private_chat_msg"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="00:00" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/vchat_line" />
+    </LinearLayout>
+
+</LinearLayout>

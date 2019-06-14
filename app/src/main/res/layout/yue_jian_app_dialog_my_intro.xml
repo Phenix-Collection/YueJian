@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="@dimen/space_40"
+        android:layout_height="@dimen/space_40"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/black" />
+
+    <View style="@style/vchat_line" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_30"
+        android:background="@color/text_color_curr_exp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_10"
+        android:text="可以介绍一下你自己"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_140"
+        android:background="@color/vchat_d6d6d6"
+        android:gravity="start"
+        android:hint="例：知名模特、演员"
+        android:maxLength="15"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingTop="@dimen/space_20"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_char_num"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_50"
+        android:gravity="right|center"
+        android:paddingRight="@dimen/space_10"
+        android:text="0/15"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+</LinearLayout>

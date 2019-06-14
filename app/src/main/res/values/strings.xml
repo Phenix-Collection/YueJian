@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">約見</string>
+    <string name="last_message_image">[图片]</string>
+    <string name="loading">正在加载数据</string>
+    <string name="copy_success">复制成功</string>
+    <string name="tip_no_internet">当前没有可用的网络连接</string>
+    <string name="determineloginout">确定退出当前账号吗？</string>
+    <string name="editnickpromp">名称不得多于8个字</string>
+    <string name="editsignpromp">最多输入20个字</string>
+    <string name="selectphotoonalbu">从相册选择</string>
+    <string name="selectphotooncamera">拍照</string>
+    <string name="editsuccess">修改成功</string>
+    <string name="editfail">修改失败</string>
+    <string name="wxpay">微信支付</string>
+    <string name="alipay">支付宝支付</string>
+    <string name="net_work_change">当前正在使用移动流量</string>
+    <string name="exp_formatter">/%s</string>
+    <string name="attention">关注</string>
+    <string name="newest">最新</string>
+    <string name="send_chat">发送</string>
+    <string name="privatechat">私信TA</string>
+    <string name="paymode">支付方式:</string>
+    <string name="payresult">支付结果</string>
+    <string name="search">搜索</string>
+    <string name="default_prompt">吖，内容是空的~</string>
+    <string name="default_privatechat">没有好友的世界好孤独，快去找他们吧</string>
+    <string name="plaseinputphonenum">请输入手机号</string>
+    <string name="plasecheckyounumiscorrect">请检查手机号码是否输入正确</string>
+    <string name="codehasbeensend">验证码已发送</string>
+    <string name="livestartpush">是否接收消息</string>
+    <string name="push">推送管理</string>
+    <string name="user_agent"><u>服务条款和隐私</u></string>
+    <string name="system_version">当前版本：%s</string>
+    <string name="share_title">浪花</string>
+    <string name="phone_code_hint">请输入验证码</string>
+    <string name="listview_loading">加载中…</string>
+    <string name="no_more">我是有底线的…</string>
+    <string name="search_more">查看更多</string>
+    <string name="agora_app_id">98822d92017b409fa972ed986bc6b0d9</string>
+
+    <string-array name="tab_top_titles">
+        <item>关注</item>
+        <item>推荐</item>
+        <item>新人</item>
+        <!--<item>三星</item>
+        <item>四星</item>
+        <item>五星</item>-->
+    </string-array>
+
+    <string-array name="broadcaster_status">
+        <item>离线</item>
+        <item>在线</item>
+        <item>通话中</item>
+        <item>勿扰</item>
+    </string-array>
+    <string-array name="broadcaster_status_color">
+        <item>#60a1e3</item>
+        <item>#6cda75</item>
+        <item>#ed6797</item>
+        <item>#afafae</item>
+    </string-array>
+
+    <string-array name="auth_status">
+        <item>待审</item>
+        <item>在审</item>
+        <item>拒审</item>
+        <item>过审</item>
+    </string-array>
+
+    <string-array name="tab_bottom_titles">
+        <item>首页</item>
+        <item>热门</item>
+        <item>消息</item>
+        <item>个人</item>
+    </string-array>
+
+    <string name="unit">钻</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--faceunity sdk 相关-->
+
+    <string name="expression_calibrating">表情校准中</string>
+
+    <string name="qingqing_ztt_fu">嘟嘴试试</string>
+    <string name="xiaobianzi_zh_fu">微笑触发</string>
+
+    <string name="ziran">自然</string>
+    <string name="danya">淡雅</string>
+    <string name="fennen">粉嫩</string>
+    <string name="qingxin">清新</string>
+    <string name="hongrun">红润</string>
+
+    <string name="country_province_city">
+      {
+  "name": "国家",
+  "country": [
+    {
+      "name": "中国",
+      "province": [
+        {
+          "name": "北京",
+          "city": [
+            "东城区",
+            "西城区",
+            "海淀区",
+            "朝阳区",
+            "丰台区",
+            "石景山区",
+            "通州区",
+            "顺义区",
+            "房山区",
+            "大兴区",
+            "昌平区",
+            "怀柔区",
+            "平谷区",
+            "门头沟区",
+            "密云县",
+            "延庆县"
+          ]
+        },
+        {
+          "name": "天津",
+          "city": [
+            "和平区",
+            "河西区",
+            "南开区",
+            "河东区",
+            "河北区",
+            "红桥区",
+            "东丽区",
+            "津南区",
+            "西青区",
+            "北辰区",
+            "滨海新区",
+            "武清区",
+            "宝坻区",
+            "蓟县",
+            "宁河县",
+            "静海县"
+          ]
+        },
+        {
+          "name": "河北",
+          "city": [
+            "石家庄",
+            "唐山",
+            "秦皇岛",
+            "邯郸",
+            "邢台",
+            "保定",
+            "张家口",
+            "承德",
+            "沧州",
+            "廊坊",
+            "衡水"
+          ]
+        },
+        {
+          "name": "山西",
+          "city": [
+            "太原",
+            "大同",
+            "阳泉",
+            "长治",
+            "晋城",
+            "朔州",
+            "晋中",
+            "运城",
+            "忻州",
+            "临汾",
+            "吕梁"
+          ]
+        },
+        {
+          "name": "内蒙古",
+          "city": [
+            "呼和浩特",
+            "包头",
+            "乌海",
+            "赤峰",
+            "通辽",
+            "鄂尔多斯",
+            "呼伦贝尔",
+            "巴彦淖尔 ",
+            "乌兰察布",
+            "兴安盟",
+            "锡林郭勒盟",
+            "阿拉善盟"
+          ]
+        },
+        {
+          "name": "辽宁",
+          "city": [
+            "沈阳",
+            "大连",
+            "鞍山",
+            "抚顺",
+            "本溪",
+            "丹东",
+            "锦州",
+            "营口",
+            "阜新",
+            "辽阳",
+            "盘锦",
+            "铁岭",
+            "朝阳",
+            "葫芦岛"
+          ]
+        },
+        {
+          "name": "吉林",
+          "city": [
+            "长春",
+            "吉林",
+            "四平",
+            "辽源",
+            "通化",
+            "白山",
+            "松原",
+            "白城",
+            "延边"
+          ]
+        },
+        {
+          "name": "黑龙江",
+          "city": [
+            "哈尔滨",
+            "齐齐哈尔",
+            "鸡西",
+            "鹤岗",
+            "双鸭山 ",
+            "大庆",
+            "伊春",
+            "佳木斯",
+            "七台河",
+            "牡丹江",
+            "黑河",
+            "绥化",
+            "大兴安岭"
+          ]
+        },
+        {
+          "name": "上海",
+          "city": [
+            "黄浦区",
+            "徐汇区",
+            "长宁区",
+            "静安区",
+            "普陀区",
+            "闸北区",
+            "虹口区",
+            "杨浦区",
+            "闵行区",
+            "宝山区",
+            "嘉定区",
+            "浦东新区",
+            "金山区",
+            "松江区",
+            "青浦区",
+            "奉贤区",
+            "崇明县"
+          ]
+        },
+        {
+          "name": "江苏",
+          "city": [
+            "南京",
+            "无锡",
+            "徐州",
+            "常州",
+            "苏州",
+            "南通",
+            "连云港",
+            "淮安",
+            "盐城",
+            "扬州",
+            "镇江",
+            "泰州",
+            "宿迁"
+          ]
+        },
+        {
+          "name": "浙江",
+          "city": [
+            "杭州",
+            "宁波",
+            "温州",
+            "嘉兴",
+            "湖州",
+            "绍兴",
+            "金华",
+            "衢州",
+            "舟山",
+            "台州",
+            "丽水"
+          ]
+        },
+        {
+          "name": "安徽",
+          "city": [
+            "合肥",
+            "芜湖",
+            "蚌埠",
+            "淮南",
+            "马鞍山",
+            "淮北",
+            "铜陵",
+            "安庆",
+            "黄山",
+            "滁州",
+            "阜阳",
+            "宿州",
+            "六安",
+            "亳州",
+            "池州",
+            "宣城"
+          ]
+        },
+        {
+          "name": "福建",
+          "city": [
+            "福州",
+            "厦门",
+            "莆田",
+            "三明",
+            "泉州",
+            "漳州",
+            "南平",
+            "龙岩",
+            "宁德"
+          ]
+        },
+        {
+          "name": "江西",
+          "city": [
+            "南昌",
+            "景德镇",
+            "萍乡",
+            "九江",
+            "新余",
+            "鹰潭",
+            "赣州",
+            "吉安",
+            "宜春",
+            "抚州",
+            "上饶"
+          ]
+        },
+        {
+          "name": "山东",
+          "city": [
+            "济南",
+            "青岛",
+            "淄博",
+            "枣庄",
+            "东营",
+            "烟台",
+            "潍坊",
+            "威海",
+            "济宁",
+            "泰安",
+            "日照",
+            "莱芜",
+            "临沂 ",
+            "德州",
+            "聊城",
+            "滨州",
+            "菏泽"
+          ]
+        },
+        {
+          "name": "河南",
+          "city": [
+            "郑州",
+            "开封",
+            "洛阳",
+            "平顶山",
+            "焦作",
+            "鹤壁",
+            "新乡",
+            "安阳",
+            "濮阳",
+            "许昌",
+            "漯河",
+            "三门峡",
+            "南阳 ",
+            "商丘",
+            "信阳",
+            "周口",
+            "驻马店"
+          ]
+        },
+        {
+          "name": "湖北",
+          "city": [
+            "武汉",
+            "黄石",
+            "襄阳",
+            "十堰",
+            "荆州",
+            "宜昌",
+            "荆门",
+            "鄂州",
+            "孝感",
+            "黄冈",
+            "咸宁",
+            "随州",
+            "恩施"
+          ]
+        },
+        {
+          "name": "湖南",
+          "city": [
+            "长沙",
+            "株洲",
+            "湘潭",
+            "衡阳",
+            "邵阳",
+            "岳阳",
+            "常德",
+            "张家界",
+            "益阳",
+            "郴州",
+            "永州",
+            "怀化",
+            "娄底",
+            "湘西"
+          ]
+        },
+        {
+          "name": "广东",
+          "city": [
+            "广州",
+            "深圳",
+            "珠海",
+            "汕头",
+            "韶关",
+            "佛山",
+            "江门",
+            "湛江",
+            "茂名",
+            "肇庆",
+            "惠州",
+            "梅州",
+            "汕尾",
+            "河源",
+            "阳江",
+            "清远",
+            "东莞",
+            "中山",
+            "潮州",
+            "揭阳",
+            "云浮"
+          ]
+        },
+        {
+          "name": "广西",
+          "city": [
+            "南宁",
+            "柳州",
+            "桂林",
+            "梧州",
+            "北海",
+            "防城港",
+            "钦州",
+            "贵港",
+            "玉林",
+            "百色",
+            "贺州",
+            "河池",
+            "来宾",
+            "崇左"
+          ]
+        },
+        {
+          "name": "海南",
+          "city": [
+            "海口",
+            "三亚"
+          ]
+        },
+        {
+          "name": "重庆",
+          "city": [
+            "渝中区",
+            "大渡口区",
+            "江北区",
+            "沙坪坝区",
+            "九龙坡区",
+            "南岸区",
+            "北碚区",
+            "綦江区",
+            "大足区",
+            "渝北区",
+            "巴南区",
+            "万州区",
+            "涪陵区",
+            "黔江区",
+            "长寿区",
+            "江津区",
+            "合川区",
+            "永川区",
+            "南川区",
+            "潼南",
+            "铜梁",
+            "荣昌",
+            "璧山",
+            "垫江",
+            "武隆",
+            "丰都",
+            "城口",
+            "梁平",
+            "开县",
+            "巫溪",
+            "巫山",
+            "奉节",
+            "云阳",
+            "忠县",
+            "石柱",
+            "彭水",
+            "酉阳",
+            "秀山"
+          ]
+        },
+        {
+          "name": "四川",
+          "city": [
+            "成都",
+            "自贡",
+            "攀枝花",
+            "泸州",
+            "德阳",
+            "绵阳",
+            "广元",
+            "遂宁",
+            "内江",
+            "乐山",
+            "南充 ",
+            "宜宾",
+            "广安",
+            "达州",
+            "眉山",
+            "雅安",
+            "巴中",
+            "资阳",
+            "阿坝",
+            "甘孜",
+            "凉山"
+          ]
+        },
+        {
+          "name": "贵州",
+          "city": [
+            "贵阳",
+            "六盘水",
+            "遵义",
+            "安顺",
+            "铜仁",
+            "毕节",
+            "黔西南",
+            "黔东南",
+            "黔南"
+          ]
+        },
+        {
+          "name": "云南",
+          "city": [
+            "昆明",
+            "曲靖",
+            "玉溪",
+            "保山",
+            "昭通",
+            "丽江",
+            "普洱",
+            "临沧",
+            "文山",
+            "红河",
+            "西双版纳",
+            "楚雄",
+            "大理",
+            "德宏",
+            "怒江",
+            "迪庆"
+          ]
+        },
+        {
+          "name": "西藏",
+          "city": [
+            "拉萨",
+            "昌都",
+            "山南",
+            "日喀则",
+            "那曲",
+            "阿里",
+            "林芝"
+          ]
+        },
+        {
+          "name": "陕西",
+          "city": [
+            "西安",
+            "铜川",
+            "宝鸡",
+            "咸阳",
+            "渭南",
+            "延安",
+            "汉中",
+            "榆林",
+            "安康",
+            "商洛"
+          ]
+        },
+        {
+          "name": "甘肃",
+          "city": [
+            "兰州",
+            "嘉峪关",
+            "金昌",
+            "白银",
+            "天水",
+            "武威",
+            "张掖",
+            "平凉",
+            "酒泉",
+            "庆阳",
+            "定西",
+            "陇南",
+            "临夏",
+            "甘南"
+          ]
+        },
+        {
+          "name": "青海",
+          "city": [
+            "西宁",
+            "海东",
+            "海北",
+            "黄南",
+            "海南",
+            "果洛",
+            "玉树",
+            "海西"
+          ]
+        },
+        {
+          "name": "宁夏",
+          "city": [
+            "银川",
+            "石嘴山",
+            "吴忠",
+            "固原",
+            "中卫"
+          ]
+        },
+        {
+          "name": "新疆",
+          "city": [
+            "乌鲁木齐",
+            "克拉玛依",
+            "吐鲁番",
+            "哈密",
+            "和田",
+            "阿克苏",
+            "喀什",
+            "克孜勒苏",
+            "巴音郭楞",
+            "昌吉",
+            "博尔塔拉",
+            "伊犁",
+            "塔城",
+            "阿勒泰"
+          ]
+        },
+        {
+          "name": "台湾",
+          "city": [
+            "台北",
+            "高雄"
+          ]
+        },
+        {
+          "name": "香港",
+          "city": [
+            "中西区",
+            "湾仔区",
+            "东区",
+            "南区",
+            "九龙城区",
+            "油尖旺区",
+            "观塘区",
+            "黄大仙区",
+            "深水埗区",
+            "北区",
+            "大埔区",
+            "沙田区",
+            "西贡区",
+            "元朗区",
+            "屯门区",
+            "荃湾区",
+            "葵青区",
+            "离岛区"
+          ]
+        },
+        {
+          "name": "澳门",
+          "city": [
+            "花地玛堂区",
+            "圣安多尼堂区",
+            "大堂区",
+            "望德堂区",
+            "风顺堂区",
+            "嘉模堂区",
+            "圣方济各堂区",
+            "路氹城"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "海外",
+      "province": [
+        {
+          "name": "海外",
+          "city": [
+            "海外"
+          ]
+        }
+      ]
+    }
+  ]
+}</string>
+
+    <string name="receive_new_message">收到新消息</string>
+
+</resources>
+

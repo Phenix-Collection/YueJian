@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="@dimen/space_40"
+        android:layout_height="@dimen/space_40"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/black" />
+
+    <View style="@style/vchat_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_240"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="请输入真实姓名或公知网名"
+            android:maxLength="15"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            style="@style/vchat_line"
+            android:layout_marginLeft="@dimen/space_30"
+            android:layout_marginRight="@dimen/space_30"
+            android:layout_marginTop="@dimen/space_140" />
+    </RelativeLayout>
+</LinearLayout>

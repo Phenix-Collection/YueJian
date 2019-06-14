@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_50"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_50">
+
+        <RelativeLayout
+            android:layout_width="@dimen/space_200"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/yue_jian_app_background_gift_item">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal">
+                <!--用户头像-->
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/av_gift_uhead"
+                    android:layout_width="@dimen/space_40"
+                    android:layout_height="@dimen/space_40" />
+                <!--礼物名称和用户昵称显示-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_gift_uname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_gift_gname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:textColor="@color/brightyellow"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.mingquan.yuejian.widget.YueJianAppLoadUrlImageView
+                android:id="@+id/av_gift_icon"
+                android:layout_width="@dimen/space_40"
+                android:layout_height="@dimen/space_40"
+                android:layout_marginLeft="-40dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_gift_num"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/space_160"
+        android:alpha="0.8"
+        android:gravity="center"
+        android:text="X1"
+        android:textColor="@color/gold"
+        android:textSize="@dimen/space_29" />
+
+</FrameLayout>

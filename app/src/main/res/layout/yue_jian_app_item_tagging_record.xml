@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_65">
+
+        <com.mingquan.yuejian.widget.YueJianAppAvatarView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/space_45"
+            android:layout_height="@dimen/space_45"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_14"
+            android:src="@drawable/yue_jian_app_ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_5"
+            android:layout_toRightOf="@id/avatar" />
+
+        <com.mingquan.yuejian.vchat.YueJianAppLabelGroup
+            android:id="@+id/label_container"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/space_12"
+            app:labelTextPaddingBottom="4dp"
+            app:labelTextPaddingLeft="8dp"
+            app:labelTextPaddingRight="8dp"
+            app:labelTextPaddingTop="4dp"
+            app:labelTextSize="@dimen/sp_11"
+            app:lineMargin="10dp"
+            app:selectType="1"
+            app:wordMargin="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/view_line" />
+    </RelativeLayout>
+
+</LinearLayout>

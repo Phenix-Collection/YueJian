@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- 导航标题栏 -->
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_56"
+        android:layout_marginTop="@dimen/space_20"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="@dimen/space_250"
+            android:layout_height="@dimen/space_30"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_12"
+            android:background="@drawable/yue_jian_app_background_search_ll"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/space_8"
+                android:src="@drawable/yue_jian_app_icon_search_pressed" />
+
+            <EditText
+                android:id="@+id/et_search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:background="@null"
+                android:focusableInTouchMode="true"
+                android:hint="请输入用户昵称ID"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_color_AFAEAE"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/space_12"
+            android:text="取消"
+            android:textColor="@color/vchat_565656"
+            android:textSize="@dimen/sp_13" />
+
+        <View
+            style="@style/vchat_line"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp" />
+
+    <TextView
+        android:id="@+id/txv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="没有找到该用户"
+        android:textColor="@color/gray"
+        android:visibility="gone" />
+
+</LinearLayout>

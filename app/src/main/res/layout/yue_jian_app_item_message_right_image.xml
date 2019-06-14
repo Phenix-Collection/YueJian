@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/space_3"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/space_10" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_5"
+        android:layout_marginTop="@dimen/space_5">
+
+        <com.mingquan.yuejian.widget.YueJianAppAvatarView
+            android:id="@+id/av_message_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_5" />
+
+        <!--<RelativeLayout
+            android:paddingRight="@dimen/space_8"
+            android:paddingTop="@dimen/space_3"
+            android:paddingBottom="@dimen/space_3"
+            android:paddingLeft="@dimen/space_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/yue_jian_app_chat_send_nor"
+            android:layout_marginRight="30dp">
+         LoadUrlImageViewView
+                android:id="@+id/iv_message_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="@dimen/space_180"
+                android:maxHeight="@dimen/space_173"
+                android:scaleType="fitXY" />
+        </RelativeLayout>-->
+
+        <com.mingquan.yuejian.ui.view.YueJianAppChatImageView
+            android:id="@+id/iv_message_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_40"
+            android:scaleType="fitXY"
+            android:src="@drawable/yue_jian_app_default_pic"
+            app:corner_position="right" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

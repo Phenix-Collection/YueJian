@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="colorPrimary">#3F51B5</color>
+
+    <!-- 常用颜色值 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="location_color">#757474</color>
+    <color name="gray">#808080</color>
+    <color name="bocop_dialog_bg">#77000000</color>
+    <color name="red">#F14040</color>
+    <color name="gold">#FFD700</color>
+    <color name="actionbarbackground">#ea4579</color>
+    <!--<color name="login_bg">#FC87A0</color>-->
+    <color name="text_color_AFAEAE">#AFAEAE</color>
+    <color name="text_color_4" tools:keep="@color/text_color_4">#333333</color>
+    <color name="text_color_5" tools:keep="@color/text_color_5">#999999</color>
+    <!--连麦 颜色-->
+
+    <color name="global">#4BA3C0</color>
+    <color name="global2">#4BA3C0</color>
+    <color name="gray2">#EEEEEE</color>
+    <color name="main_black">#333</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_blank">#99000000</color>
+    <color name="light_gray2" tools:keep="@color/light_gray2">#B4B4B4</color>
+    <color name="brightyellow">#FAF767</color>
+    <color name="color_FFAD37">#ffad37</color>
+    <color name="transparent_black">#7F000000</color>
+    <color name="account_diamond_color" tools:keep="@color/account_diamond_color">#7F9DFF</color>
+    <color name="color_main">#ea4579</color>
+    <color name="text_color_personal_value">#979595</color>
+
+    <!--用户等级颜色值-->
+
+    <!--关于页面退出登录-->
+
+    <!-- 新增 -->
+    <color name="dan_mu_bg_color">#72000000</color>
+    <color name="stack2">#afaeae</color>
+    <color name="hint_gray">#BBBCBD</color>
+    <color name="view_line">#F0F0F0</color>
+    <color name="private_chat_msg">#979595</color>
+    <!--<color name="man_checked" tools:keep="@color/man_checked">#6089fc</color>-->
+    <color name="female_sex_bg" tools:keep="@color/female_sex_bg">#FC618A</color>
+    <!--ActionSheetDialog相关-->
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <!--高级用户入场颜色-->
+
+
+    <color name="circle_level_bg">#0fe8be</color>
+    <color name="text_color_curr_exp">#ff78af</color>
+    <color name="text_color_total_exp">#2a9dbc</color>
+
+    <color name="main_pure">#ffffff</color><!--#433686-->
+
+    <color name="home_pink">#ea4579</color>
+    <color name="home_grey">#878787</color>
+
+    <color name="line_color">#f3f3f3</color>
+
+    <color name="vchat_919191">#919191</color>
+    <color name="vchat_d6d6d6">#d6d6d6</color>
+    <color name="vchat_ea4579">#ea4579</color>
+    <color name="vchat_696969">#696969</color>
+    <color name="vchat_565656">#565656</color>
+    <color name="vchat_f6f6f6">#f6f6f6</color>
+    <color name="vchat_878787">#878787</color>
+
+    /*********************faceunity sdk相关*******************/
+    <color name="colorTranslucent">#00000000</color>
+    <color name="faceunityYellow">#ffcb15</color>
+    <color name="percent50translucentBlack">#80000000</color> <!--50%-->
+    <color name="pinkColor" tools:keep="@color/pinkColor">#ff5f9a</color>
+</resources>

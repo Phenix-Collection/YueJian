@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="163dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/space_100"
+        android:background="@drawable/icon_17006">
+
+        <EditText
+            android:id="@+id/et_reply_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_100"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="请输入短语"
+            android:lines="1"
+            android:maxLength="20"
+            android:textColor="@color/vchat_565656"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#007aff"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="#007aff"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

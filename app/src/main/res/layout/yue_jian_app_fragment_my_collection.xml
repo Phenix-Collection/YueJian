@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rvp="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_44"
+        android:layout_marginTop="@dimen/space_20">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_14"
+            android:src="@drawable/yue_jian_app_btn_back_gray" />
+
+        <com.ruffian.library.RVPIndicator
+            android:id="@+id/indicator"
+            android:layout_width="@dimen/space_240"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            rvp:indicator_color="@color/home_pink"
+            rvp:indicator_height="3dp"
+            rvp:indicator_style="line"
+            rvp:indicator_visible_count="2"
+            rvp:indicator_width="@dimen/space_14"
+            rvp:style_line_padding="@dimen/space_53"
+            rvp:text_color_normal="@color/home_grey"
+            rvp:text_color_selected="@color/home_pink"
+            rvp:text_size="@dimen/sp_16" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

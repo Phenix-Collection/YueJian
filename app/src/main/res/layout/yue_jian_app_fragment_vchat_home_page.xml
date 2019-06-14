@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--head view-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_270">
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:layout_marginTop="@dimen/space_35"
+                    android:background="@drawable/yue_jian_app_icon_edit" />
+
+                <!--用户信息的布局-->
+                <LinearLayout
+                    android:id="@+id/ll_user_info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/space_80"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/space_70"
+                        android:layout_height="@dimen/space_70">
+
+                        <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="@dimen/space_70"
+                            android:layout_height="@dimen/space_70"
+                            android:src="@drawable/yue_jian_app_default_head" />
+
+                        <ImageView
+                            android:id="@+id/iv_icon_vip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/yue_jian_app_icon_vip"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_20"
+                        android:text="名字名字"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12" />
+
+                    <com.mingquan.yuejian.vchat.YueJianAppRoundTextView
+                        android:id="@+id/rtv_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_3"
+                        android:text="LV.1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/space_7"
+                        app:rtv_radius="@dimen/space_8" />
+
+                    <TextView
+                        android:id="@+id/tv_user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_3"
+                        android:textSize="@dimen/sp_10" />
+                </LinearLayout>
+
+
+                <!--关注、钻石-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_user_info_layout"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_attention"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_attention_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_attention_num"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:text="@string/attention"
+                            android:textColor="#919191"
+                            android:textSize="@dimen/text_size_11" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_diamond"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_diamond_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_diamond_num"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/space_8"
+                            android:text="钻石"
+                            android:textColor="#919191"
+                            android:textSize="@dimen/text_size_11" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_8"
+                    android:layout_alignParentBottom="true"
+                    android:background="#f3f3f3" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_extension"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--bottom view-->
+            <!--我的钱包-->
+            <LinearLayout
+                android:id="@+id/ll_my_package"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="我的钱包" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                style="@style/vchat_line"
+                android:visibility="visible" />
+
+            <!--分成计划-->
+            <LinearLayout
+                android:id="@+id/ll_my_price"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="我的价格" />
+
+                <TextView
+                    android:id="@+id/tv_my_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textColor="@color/vchat_ea4579"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                style="@style/vchat_line"
+                android:visibility="gone" />
+
+            <!--分成计划-->
+            <LinearLayout
+                android:id="@+id/ll_project"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="分成计划" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--我的通话-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_my_call"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="我的通话" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                style="@style/vchat_line"
+                android:visibility="gone" />
+
+            <!--我的时长-->
+            <LinearLayout
+                android:id="@+id/ll_my_time"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="我的时长" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                style="@style/vchat_line"
+                android:visibility="visible" />
+
+            <!--我的时长-->
+            <LinearLayout
+                android:id="@+id/ll_invitation"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="邀请" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--我的钻石-->
+            <LinearLayout
+                android:id="@+id/ll_my_diamond"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="我的钻石" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                style="@style/vchat_line"
+                android:visibility="gone" />
+
+            <!--预约-->
+            <LinearLayout
+                android:id="@+id/ll_appointment"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="预约" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                style="@style/vchat_line"
+                android:visibility="gone" />
+
+            <!--成为大V-->
+            <LinearLayout
+                android:id="@+id/ll_auth"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvAuthTitle"
+                    style="@style/vchat_option_item_text"
+                    android:text="成为大V" />
+
+                <TextView
+                    android:id="@+id/tvAuth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:text="马上认证"
+                    android:textColor="@color/vchat_ea4579"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--上传视频-->
+            <LinearLayout
+                android:id="@+id/ll_upload_video"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="上传视频" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right|center_vertical"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                style="@style/vchat_line"
+                android:visibility="visible" />
+
+            <!--设置美颜-->
+            <LinearLayout
+                android:id="@+id/ll_beauty"
+                style="@style/option_item_rl"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="设置美颜" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--我的私藏-->
+            <LinearLayout
+                android:id="@+id/ll_collection"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="我的收藏" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--勿扰-->
+            <LinearLayout
+                android:id="@+id/ll_not_disturb"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="勿扰" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageButton
+                    android:id="@+id/imgBtn_not_disturb"
+                    android:layout_width="33dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/yue_jian_app_global_switch_off" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--清理缓存-->
+            <LinearLayout
+                android:id="@+id/ll_clear_cache"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="清理缓存" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--账户安全-->
+            <LinearLayout
+                android:id="@+id/ll_safety"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="账户安全" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--账户安全-->
+            <LinearLayout
+                android:id="@+id/ll_build_id"
+                style="@style/option_item_rl"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="版本号" />
+
+                <TextView
+                    android:id="@+id/tv_build_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+
+            <!--安全退出-->
+            <LinearLayout
+                android:id="@+id/ll_logout"
+                style="@style/option_item_rl"
+                android:layout_marginBottom="@dimen/space_56"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/vchat_option_item_text"
+                    android:text="安全退出" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/space_5"
+                    android:drawableRight="@drawable/yue_jian_app_icon_13004"
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View style="@style/vchat_line" />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

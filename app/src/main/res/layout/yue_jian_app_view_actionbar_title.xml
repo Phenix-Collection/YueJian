@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_title"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/global"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/space_8"
+    android:paddingRight="@dimen/space_16">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:paddingRight="@dimen/space_3"
+            android:src="@drawable/yue_jian_app_btn_back" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_actionBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="35dp"
+        android:gravity="center"
+        android:text="标题"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/yue_jian_app_icon_gh_more" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="0dp"
+            android:text="保存"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

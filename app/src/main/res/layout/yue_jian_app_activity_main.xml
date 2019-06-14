@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.mingquan.yuejian.ui.view.YueJianAppDanMuView
+            android:id="@+id/dan_mu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:minHeight="@dimen/space_50"
+            android:layout_marginTop="@dimen/space_60"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/tab_host_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_55">
+
+            <View
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_0_5"
+                android:background="@color/line_color"/>
+
+            <android.support.v4.app.FragmentTabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:background="@color/white" />
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/space_8"
+                android:id="@+id/red_point"
+                android:layout_width="@dimen/space_12"
+                android:layout_height="@dimen/space_12"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/space_40"
+                android:background="@drawable/yue_jian_app_unread_dot"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+</merge>

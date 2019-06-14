@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:background="@color/black"
+            android:id="@+id/iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_show_gift_selected_border"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <!--礼物图片-->
+            <com.mingquan.yuejian.widget.YueJianAppLoadUrlImageView
+                android:id="@+id/iv_show_gift_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+
+            <!--礼物价格-->
+            <TextView
+                android:id="@+id/tv_show_gift_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_5"
+                android:drawablePadding="@dimen/space_2"
+                android:drawableRight="@drawable/yue_jian_app_ico_diamond"
+                android:text="0"
+                android:textColor="@color/gold" />
+
+            <TextView
+                android:id="@+id/tv_gift_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="礼物"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

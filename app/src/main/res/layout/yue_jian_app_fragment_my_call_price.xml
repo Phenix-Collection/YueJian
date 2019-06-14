@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.mingquan.yuejian.vchat.YueJianAppXTemplateTitle
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        app:title_text="我的价格" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_240"
+        android:layout_marginTop="@dimen/space_50">
+
+        <com.aigestudio.wheelpicker.WheelPicker
+            android:id="@+id/wheel_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_240"
+            app:wheel_atmospheric="true"
+            app:wheel_curved="true"
+            app:wheel_cyclic="false"
+            app:wheel_item_align="center"
+            app:wheel_item_text_color="@color/vchat_565656"
+            app:wheel_item_text_size="24sp"
+            app:wheel_selected_item_text_color="@color/black" />
+
+        <TextView
+            android:layout_marginRight="@dimen/space_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="钻石/分钟"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_conform"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_30"
+        android:background="@drawable/yue_jian_app_vchat_bind_button_bg_selector"
+        android:text="确定"
+        android:textColor="@color/white" />
+</LinearLayout>

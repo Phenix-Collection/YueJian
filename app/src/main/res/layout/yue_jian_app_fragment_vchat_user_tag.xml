@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mingquan.yuejian.vchat.YueJianAppXTemplateTitle
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_44"
+        android:layout_marginTop="@dimen/space_20"
+        app:title_text="用户印象" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_20">
+
+        <com.mingquan.yuejian.vchat.YueJianAppLabelGroup
+            android:id="@+id/label_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/space_5"
+            app:labelTextPaddingBottom="4dp"
+            app:labelTextPaddingLeft="8dp"
+            app:labelTextPaddingRight="8dp"
+            app:labelTextPaddingTop="4dp"
+            app:labelTextSize="@dimen/sp_11"
+            app:lineMargin="10dp"
+            app:selectType="1"
+            app:wordMargin="5dp" />
+
+        <TextView
+            android:id="@+id/tv_empty_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:textSize="@dimen/space_14" />
+    </RelativeLayout>
+</LinearLayout>

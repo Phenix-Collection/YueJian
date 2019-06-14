@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/yue_jian_app_btn_ticket_labe"
+                android:paddingRight="@dimen/space_5"
+    >
+
+    <com.mingquan.yuejian.widget.YueJianAppAvatarView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/space_35"
+        android:layout_height="@dimen/space_35"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/space_4"
+        android:src="@drawable/yue_jian_app_null_blacklist"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_35"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:gravity="top|left"
+        android:paddingRight="@dimen/space_2">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:paddingLeft="@dimen/space_2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:gravity="top"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_11"/>
+
+        <TextView
+            android:id="@+id/tv_say"
+            android:padding="@dimen/space_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:gravity="top"
+            android:textColor="@color/color_main"
+            android:textSize="@dimen/text_size_10"/>
+        </RelativeLayout>
+</RelativeLayout>

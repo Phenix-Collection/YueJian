@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--top-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_350">
+
+        <com.mingquan.yuejian.widget.YueJianAppSlideShowView
+            android:id="@+id/index_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_62"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/yue_jian_app_vchat_avatar_bottom_mask" />
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_14"
+            android:layout_marginTop="33dp"
+            android:src="@drawable/yue_jian_app_icon_gh_more" />
+
+        <com.mingquan.yuejian.widget.YueJianAppStatusTextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/space_14"
+            android:layout_marginTop="60dp"
+            android:text="在线"
+            android:textSize="@dimen/space_8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_marginLeft="@dimen/space_14"
+            android:layout_marginRight="@dimen/space_14"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_50"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_20"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:text="名字名字"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_17" />
+
+                    <com.mingquan.yuejian.ui.view.YueJianAppMyRatingBar
+                        android:id="@+id/rating_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/space_14"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/space_3"
+                        app:clickable="false"
+                        app:starCount="5"
+                        app:starFill="@drawable/yue_jian_app_vchat_star"
+                        app:starImageSize="@dimen/space_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_50"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_fans_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space_6"
+                        android:shadowColor="@color/home_grey"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="2000 粉丝"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/space_12" />
+
+                    <TextView
+                        android:id="@+id/tv_follow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/yue_jian_app_icon_04003"
+                        android:gravity="center"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_1"
+                android:layout_marginBottom="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_signature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="模特 主播"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_user_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--center-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_14"
+        android:paddingRight="@dimen/space_14">
+
+        <LinearLayout
+            android:id="@+id/ll_expend"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="与我视频聊天需要支付:"
+                android:textColor="@color/vchat_565656"
+                android:textSize="@dimen/space_14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/yue_jian_app_icon_04008" />
+
+            <TextView
+                android:id="@+id/tv_expend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_4"
+                android:text="88"
+                android:textColor="#ed5b8b"
+                android:textSize="@dimen/space_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_4"
+                android:text="钻石/分钟"
+                android:textColor="#ed5b8b"
+                android:textSize="@dimen/space_14" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="与我亲密的："
+                android:textColor="#565656"
+                android:textSize="@dimen/space_14" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/avatar_1"
+                    android:layout_width="@dimen/space_33"
+                    android:layout_height="@dimen/space_33"
+                    android:src="@drawable/yue_jian_app_default_head" />
+
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/avatar_2"
+                    android:layout_width="@dimen/space_33"
+                    android:layout_height="@dimen/space_33"
+                    android:layout_marginLeft="@dimen/space_8"
+                    android:src="@drawable/yue_jian_app_default_head" />
+
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/avatar_3"
+                    android:layout_width="@dimen/space_33"
+                    android:layout_height="@dimen/space_33"
+                    android:layout_marginLeft="@dimen/space_8"
+                    android:src="@drawable/yue_jian_app_default_head" />
+
+                <ImageView
+                    android:id="@+id/iv_avatar_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:background="@drawable/yue_jian_app_icon_13004" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="礼物柜："
+                android:textColor="#565656"
+                android:textSize="@dimen/space_14" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/space_6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/gift_1"
+                    android:layout_width="@dimen/space_33"
+                    android:layout_height="@dimen/space_33" />
+
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/gift_2"
+                    android:layout_width="@dimen/space_33"
+                    android:layout_height="@dimen/space_33"
+                    android:layout_marginLeft="@dimen/space_8" />
+
+                <com.mingquan.yuejian.widget.YueJianAppAvatarView
+                    android:id="@+id/gift_3"
+                    android:layout_width="@dimen/space_33"
+                    android:layout_height="@dimen/space_33"
+                    android:layout_marginLeft="@dimen/space_8" />
+
+                <ImageView
+                    android:id="@+id/iv_gift_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_15"
+                    android:background="@drawable/yue_jian_app_icon_13004" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

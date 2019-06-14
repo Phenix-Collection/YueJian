@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_56"
+        android:layout_marginTop="@dimen/space_20">
+
+        <com.mingquan.yuejian.vchat.YueJianAppXTemplateTitle
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title_text="账号充值" />
+
+        <TextView
+            android:id="@+id/tv_contact_customer_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/space_14"
+            android:drawableLeft="@drawable/yue_jian_app_recharge_006"
+            android:drawablePadding="@dimen/space_2"
+            android:gravity="center"
+            android:text="联系客服"
+            android:textColor="@color/vchat_878787" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_pay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@color/transparent" />
+
+    <ImageView
+        android:id="@+id/iv_recharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_5"
+        android:background="@drawable/yue_jian_app_recharge_001" />
+</LinearLayout>

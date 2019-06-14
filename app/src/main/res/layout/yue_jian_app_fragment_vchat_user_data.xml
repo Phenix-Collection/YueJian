@@ -1,0 +1,437 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mingquan.yuejian.vchat.VChatUserDataFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--个性签名-->
+            <LinearLayout
+                android:id="@+id/ll_signature"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="17dp"
+                    android:background="#ea4579" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_11"
+                    android:text="个性签名"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_signature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:lines="1"
+                    android:text="“来看我的风情万种”"
+                    android:textColor="#878787"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_5"
+                android:background="#d6d6d6" />
+
+            <!--标签-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="17dp"
+                    android:background="#ea4579" />
+                <TextView
+                    android:layout_marginLeft="@dimen/space_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标签"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <!--自评形象-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:text="自评形象"
+                    android:textColor="#919191"
+                    android:textSize="@dimen/sp_14"
+                    android:id="@+id/textView" />
+
+                    <com.mingquan.yuejian.vchat.YueJianAppLabelGroup
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/self_label_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/space_24"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/space_20"
+                        app:labelTextPaddingBottom="4dp"
+                        app:labelTextPaddingLeft="8dp"
+                        app:labelTextPaddingRight="8dp"
+                        app:labelTextPaddingTop="4dp"
+                        app:labelTextSize="@dimen/sp_11"
+                        app:lineMargin="10dp"
+                        app:selectType="1"
+                        app:wordMargin="5dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <!--用户印象-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:text="用户印象"
+                    android:textColor="#919191"
+                    android:textSize="@dimen/sp_14" />
+
+
+                <ImageView
+                    android:id="@+id/iv_label_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:padding="@dimen/space_5"
+                    android:src="@drawable/yue_jian_app_icon_13004" />
+
+                <com.mingquan.yuejian.vchat.YueJianAppLabelGroup
+                    android:id="@+id/user_label_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/space_5"
+                    android:layout_toLeftOf="@id/iv_label_more"
+                    app:labelTextPaddingBottom="4dp"
+                    app:labelTextPaddingLeft="8dp"
+                    app:labelTextPaddingRight="8dp"
+                    app:labelTextPaddingTop="4dp"
+                    app:labelTextSize="@dimen/sp_11"
+                    app:lineMargin="10dp"
+                    app:selectType="1"
+                    app:wordMargin="5dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#d6d6d6" />
+
+            <!--个人资料-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="17dp"
+                    android:background="#ea4579" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_11"
+                    android:text="个人资料"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <!--最后登录-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:text="最后登录"
+                    android:textColor="@color/vchat_878787"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/last_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:lines="1"
+                    android:text="15小时之前"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <!--接听率-->
+            <RelativeLayout
+                android:id="@+id/rl_receive_rate"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:text="接听率"
+                    android:textColor="#919191"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/receive_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:lines="1"
+                    android:text="78 %"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <!--身高-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:text="身高"
+                    android:textColor="#919191"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:lines="1"
+                    android:text="168 cm"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <!--体重-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:text="体重"
+                    android:textColor="#919191"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:lines="1"
+                    android:text="45 kg"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <!--星座-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:text="星座"
+                    android:textColor="#919191"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/constellation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:lines="1"
+                    android:text="白羊座"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <!--城市-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:text="城市"
+                    android:textColor="#919191"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:lines="1"
+                    android:text="上海"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#d6d6d6" />
+
+            <!--用户评价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="17dp"
+                    android:background="#ea4579" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_14"
+                    android:layout_weight="1"
+                    android:text="用户评价"
+                    android:textColor="@color/vchat_565656"
+                    android:textSize="@dimen/sp_14" />
+
+
+                <TextView
+                    android:id="@+id/love_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/space_10"
+                    android:drawableLeft="@drawable/yue_jian_app_icon_04004"
+                    android:drawablePadding="@dimen/space_5"
+                    android:text="1658"
+                    android:textColor="#696969"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/not_love_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/space_14"
+                    android:drawableLeft="@drawable/yue_jian_app_icon_04002"
+                    android:drawablePadding="@dimen/space_5"
+                    android:text="51"
+                    android:textColor="#696969"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d6d6d6" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
