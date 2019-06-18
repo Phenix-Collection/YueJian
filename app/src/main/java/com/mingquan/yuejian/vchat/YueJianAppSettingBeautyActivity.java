@@ -39,7 +39,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class YueJianAppSettingBeautyActivity2 extends YueJianAppFullScreenModeActivity implements YueJianAppCameraRenderer.OnRendererStatusListener, SensorEventListener {
+public class YueJianAppSettingBeautyActivity extends YueJianAppFullScreenModeActivity implements YueJianAppCameraRenderer.OnRendererStatusListener, SensorEventListener {
 
     @BindView(R.id.gl_surface_view2)
     GLSurfaceView glSurfaceView;
@@ -85,7 +85,7 @@ public class YueJianAppSettingBeautyActivity2 extends YueJianAppFullScreenModeAc
             getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        setContentView(R.layout.yue_jian_app_activity_setting_beauty2);
+        setContentView(R.layout.yue_jian_app_activity_setting_beauty);
         unbinder = ButterKnife.bind(this);
         glSurfaceView.setEGLContextClientVersion(2);
         mCameraRenderer = new YueJianAppCameraRenderer(this, glSurfaceView, this);
@@ -160,7 +160,7 @@ public class YueJianAppSettingBeautyActivity2 extends YueJianAppFullScreenModeAc
                 seekBarBlur.setProgress((int) (mFaceBeautyBlurLevel * 100 / 6));
                 seekBarRedLevel.setProgress((int) (mFaceBeautyRedLevel * 100));
                 seekBarThinFace.setProgress((int) (mFaceBeautyCheekThin * 100));
-                Toast.makeText(YueJianAppSettingBeautyActivity2.this, "恢复默认成功！", Toast.LENGTH_SHORT).show();
+                Toast.makeText(YueJianAppSettingBeautyActivity.this, "恢复默认成功！", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -172,7 +172,7 @@ public class YueJianAppSettingBeautyActivity2 extends YueJianAppFullScreenModeAc
                 YueJianAppSharedPreUtil.put(getApplicationContext(), "face_beauty_cheek_thin", mFaceBeautyCheekThin);
                 YueJianAppSharedPreUtil.put(getApplicationContext(), "face_beauty_enlarge_eye", mFaceBeautyEnlargeEye);
                 YueJianAppSharedPreUtil.put(getApplicationContext(), "face_beauty_red_level", mFaceBeautyRedLevel);
-                Toast.makeText(YueJianAppSettingBeautyActivity2.this, "保存设置成功！", Toast.LENGTH_SHORT).show();
+                Toast.makeText(YueJianAppSettingBeautyActivity.this, "保存设置成功！", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -35,7 +35,7 @@ import com.mingquan.yuejian.ui.YueJianAppSimpleBackActivity;
 import com.mingquan.yuejian.ui.YueJianAppWebViewActivity;
 import com.mingquan.yuejian.ui.dialog.YueJianAppDialogHelper;
 import com.mingquan.yuejian.vchat.YueJianAppSetVideoPriceActivity;
-import com.mingquan.yuejian.vchat.YueJianAppSettingBeautyActivity2;
+import com.mingquan.yuejian.vchat.YueJianAppSettingBeautyActivity;
 import com.mingquan.yuejian.vchat.YueJianAppUploadVideoActivity;
 import com.mingquan.yuejian.vchat.YueJianAppVChatShortVideoPlayActivity;
 import com.mingquan.yuejian.vchat.YueJianAppVChatShortVideoPlayerActivity;
@@ -352,7 +352,7 @@ public class YueJianAppUIHelper {
      * @param context
      */
     public static void showSettingBeautyActivity(Context context) {
-        Intent intent = new Intent(context, YueJianAppSettingBeautyActivity2.class);
+        Intent intent = new Intent(context, YueJianAppSettingBeautyActivity.class);
         context.startActivity(intent);
     }
 }

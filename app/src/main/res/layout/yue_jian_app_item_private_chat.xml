@@ -23,7 +23,7 @@
             android:layout_centerVertical="true">
 
             <com.mingquan.yuejian.widget.YueJianAppAvatarView
-                android:id="@+id/av_userHead"
+                android:id="@+id/av_user_head"
                 android:layout_width="@dimen/space_45"
                 android:layout_height="@dimen/space_45"
                 android:src="@drawable/yue_jian_app_default_head"

@@ -65,7 +65,7 @@ public class YueJianAppUserBaseInfoPrivateChatAdapter extends BaseAdapter {
     if (convertView == null) {
       convertView = View.inflate(YueJianAppAppContext.getInstance(), R.layout.yue_jian_app_item_private_chat, null);
       viewHolder = new ViewHolder();
-      viewHolder.mUHead = (YueJianAppAvatarView) convertView.findViewById(R.id.av_userHead);
+      viewHolder.mUHead = (YueJianAppAvatarView) convertView.findViewById(R.id.av_user_head);
       viewHolder.mUNice = (TextView) convertView.findViewById(R.id.tv_item_uname);
       viewHolder.mULastMsg = (TextView) convertView.findViewById(R.id.tv_item_last_msg);
       viewHolder.mUnread = (TextView) convertView.findViewById(R.id.iv_unread_dot);

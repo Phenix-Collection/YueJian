@@ -29,19 +29,19 @@ import butterknife.Unbinder;
 public class YueJianAppMyInfoDetailActivity extends YueJianAppFullScreenModeActivity implements View.OnClickListener {
     @BindView(R.id.title_layout)
     YueJianAppXTemplateTitle titleLayout;
-    @BindView(R.id.rl_userHead)
+    @BindView(R.id.rl_user_head)
     RelativeLayout mRlUserHead;
-    @BindView(R.id.rl_userNick)
+    @BindView(R.id.rl_user_nick)
     RelativeLayout mRlUserNick;
-    @BindView(R.id.rl_userSign)
+    @BindView(R.id.rl_user_sign)
     RelativeLayout mRlUserSign;
-    @BindView(R.id.rl_userSex)
+    @BindView(R.id.rl_user_sex)
     RelativeLayout mRlUserSex;
-    @BindView(R.id.tv_userNick)
+    @BindView(R.id.tv_user_nick)
     TextView mUserNick;
     @BindView(R.id.tv_sign)
     TextView mUserSign;
-    @BindView(R.id.av_userHead)
+    @BindView(R.id.av_user_head)
     YueJianAppAvatarView mUserHead;
     @BindView(R.id.tv_sex)
     TextView mSex;
@@ -75,24 +75,24 @@ public class YueJianAppMyInfoDetailActivity extends YueJianAppFullScreenModeActi
     public void onClick(View v) {
         if (mUser != null) {
             switch (v.getId()) {
-                case R.id.rl_userNick:
+                case R.id.rl_user_nick:
                     YueJianAppUIHelper.showEditInfoActivity(this, "修改昵称", getString(R.string.editnickpromp),
                             mUser.getName(), YueJianAppChangInfo.CHANG_NICK);
                     break;
-                case R.id.rl_userSign:
+                case R.id.rl_user_sign:
                     YueJianAppUIHelper.showEditInfoActivity(this, "修改签名", getString(R.string.editsignpromp),
                             mUser.getSignature(), YueJianAppChangInfo.CHANG_SIGN);
                     break;
-                case R.id.rl_userHead:
+                case R.id.rl_user_head:
                     YueJianAppUIHelper.showSelectAvatar(this, mUser.getAvatarUrl());
                     break;
-                case R.id.rl_userSex:
+                case R.id.rl_user_sex:
                     if (YueJianAppUtils.isFastClick()) {
                         return;
                     }
                     showSelectSex();
                     break;
-                case R.id.av_userHead:
+                case R.id.av_user_head:
                     YueJianAppUIHelper.showSelectAvatar(this, mUser.getAvatarUrl()); //选择头像
                     break;
             }

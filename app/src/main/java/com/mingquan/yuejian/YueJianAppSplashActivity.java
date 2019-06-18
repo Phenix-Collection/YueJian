@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
-import android.widget.TextView;
 
 import com.mingquan.yuejian.base.YueJianAppBaseApplication;
 import com.mingquan.yuejian.base.YueJianAppFullScreenModeActivity;
@@ -34,7 +33,7 @@ import static java.lang.System.setProperty;
 /**
  * 应用启动界面
  */
-public class YueJianAppAppStart extends YueJianAppFullScreenModeActivity {
+public class YueJianAppSplashActivity extends YueJianAppFullScreenModeActivity {
     /**
      * 需要进行检测的权限数组
      */
@@ -49,7 +48,7 @@ public class YueJianAppAppStart extends YueJianAppFullScreenModeActivity {
             finish();
             return;
         }
-        View view = View.inflate(this, R.layout.yue_jian_app_app_start, null);
+        View view = View.inflate(this, R.layout.yue_jian_app_activity_splash, null);
         setContentView(view);
         initData();
     }
@@ -76,10 +75,10 @@ public class YueJianAppAppStart extends YueJianAppFullScreenModeActivity {
     }
 
     public static class MyMsgDisplayListener implements YueJianAppMySophixApplication.MsgDisplayListener {
-        WeakReference<YueJianAppAppStart> mWeakReference;
+        WeakReference<YueJianAppSplashActivity> mWeakReference;
 
-        MyMsgDisplayListener(YueJianAppAppStart weakReference) {
-            mWeakReference = new WeakReference<YueJianAppAppStart>(weakReference);
+        MyMsgDisplayListener(YueJianAppSplashActivity weakReference) {
+            mWeakReference = new WeakReference<YueJianAppSplashActivity>(weakReference);
         }
 
         @Override
@@ -144,7 +143,7 @@ public class YueJianAppAppStart extends YueJianAppFullScreenModeActivity {
                 new YueJianAppAppUtil.IPermissionsResult() {
                     @Override
                     public void passPermissons() {
-                        YueJianAppAppContext.getInstance().deviceId = YueJianAppTDevice.getIMEI(YueJianAppAppStart.this);
+                        YueJianAppAppContext.getInstance().deviceId = YueJianAppTDevice.getIMEI(YueJianAppSplashActivity.this);
                         YueJianAppTLog.info("device id:%s", YueJianAppAppContext.getInstance().deviceId);
                         LitePal.initialize(getApplicationContext());
 
@@ -176,7 +175,7 @@ public class YueJianAppAppStart extends YueJianAppFullScreenModeActivity {
                     @Override
                     public void forbitPermissons() {
                         YueJianAppAppUtil.getInstance().showSystemPermissionsSettingDialog(
-                                YueJianAppAppStart.this,
+                                YueJianAppSplashActivity.this,
                                 "有权限被禁用，须手动设置",
                                 false);
                     }

@@ -13,7 +13,7 @@ import com.faceunity.authpack;
 import com.faceunity.entity.Effect;
 import com.faceunity.entity.Filter;
 import com.faceunity.wrapper.faceunity;
-import com.mingquan.yuejian.vchat.YueJianAppSettingBeautyActivity2;
+import com.mingquan.yuejian.vchat.YueJianAppSettingBeautyActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -477,16 +477,16 @@ public class YueJianAppFURenderer {
             mOnSystemErrorListener.onSystemError(faceunity.fuGetSystemErrorString(error));
         }
 
-        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "filter_level", YueJianAppSettingBeautyActivity2.mFilterLevel);
-        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "color_level", YueJianAppSettingBeautyActivity2.mFaceBeautyColorLevel);
-        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "blur_level", YueJianAppSettingBeautyActivity2.mFaceBeautyBlurLevel);
-        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "skin_detect", YueJianAppSettingBeautyActivity2.mFaceBeautyALLBlurLevel);
-        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "filter_name", YueJianAppSettingBeautyActivity2.mFilterName);
-        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "cheek_thinning", YueJianAppSettingBeautyActivity2.mFaceBeautyCheekThin);
-        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "eye_enlarging", YueJianAppSettingBeautyActivity2.mFaceBeautyEnlargeEye);
+        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "filter_level", YueJianAppSettingBeautyActivity.mFilterLevel);
+        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "color_level", YueJianAppSettingBeautyActivity.mFaceBeautyColorLevel);
+        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "blur_level", YueJianAppSettingBeautyActivity.mFaceBeautyBlurLevel);
+        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "skin_detect", YueJianAppSettingBeautyActivity.mFaceBeautyALLBlurLevel);
+        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "filter_name", YueJianAppSettingBeautyActivity.mFilterName);
+        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "cheek_thinning", YueJianAppSettingBeautyActivity.mFaceBeautyCheekThin);
+        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "eye_enlarging", YueJianAppSettingBeautyActivity.mFaceBeautyEnlargeEye);
         faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "face_shape", mFaceShape);
         faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "face_shape_level", mFaceShapeLevel);
-        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "red_level", YueJianAppSettingBeautyActivity2.mFaceBeautyRedLevel);
+        faceunity.fuItemSetParam(mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX], "red_level", YueJianAppSettingBeautyActivity.mFaceBeautyRedLevel);
 
         /*//修改美颜参数
         if (isNeedUpdateFaceBeauty && mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX] != 0) {

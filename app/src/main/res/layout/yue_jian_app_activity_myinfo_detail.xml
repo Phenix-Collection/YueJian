@@ -14,7 +14,7 @@
         app:title_text="编辑资料" />
     <!--头像-->
     <RelativeLayout
-        android:id="@+id/rl_userHead"
+        android:id="@+id/rl_user_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -31,7 +31,7 @@
             android:textSize="@dimen/text_size_16" />
 
         <com.mingquan.yuejian.widget.YueJianAppAvatarView
-            android:id="@+id/av_userHead"
+            android:id="@+id/av_user_head"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
@@ -42,7 +42,7 @@
     <View style="@style/h_line" />
     <!--昵称-->
     <RelativeLayout
-        android:id="@+id/rl_userNick"
+        android:id="@+id/rl_user_nick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -60,7 +60,7 @@
             android:textSize="@dimen/text_size_16" />
 
         <TextView
-            android:id="@+id/tv_userNick"
+            android:id="@+id/tv_user_nick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -78,7 +78,7 @@
     <View style="@style/h_line" />
 
     <RelativeLayout
-        android:id="@+id/rl_userSign"
+        android:id="@+id/rl_user_sign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -113,7 +113,7 @@
     <View style="@style/h_line" />
     <!--性别-->
     <RelativeLayout
-        android:id="@+id/rl_userSex"
+        android:id="@+id/rl_user_sex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"

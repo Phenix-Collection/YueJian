@@ -167,7 +167,7 @@
         </activity>
         <!--// 华为推送相关 end-->
         <activity
-            android:name="com.mingquan.yuejian.YueJianAppAppStart"
+            android:name="com.mingquan.yuejian.YueJianAppSplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppStartTheme">
@@ -484,7 +484,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/FullScreenModeTheme" />
         <activity
-            android:name="com.mingquan.yuejian.vchat.YueJianAppSettingBeautyActivity2"
+            android:name="com.mingquan.yuejian.vchat.YueJianAppSettingBeautyActivity"
             android:theme="@style/FullScreenModeTheme" />
         <activity
             android:name="com.mingquan.yuejian.ui.VoiceChatViewActivity"

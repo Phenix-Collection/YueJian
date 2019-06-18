@@ -33,7 +33,7 @@ import butterknife.ButterKnife;
 
 public class ConversationItemView extends RelativeLayout {
     public static final String TAG = "ConversationItemView";
-    @BindView(R.id.av_userHead)
+    @BindView(R.id.av_user_head)
     YueJianAppAvatarView mAVAvatar;
     @BindView(R.id.iv_icon_vip)
     ImageView ivIconVip;
