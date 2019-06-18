@@ -92,4 +92,28 @@
         android:layout_below="@id/ll_notify"
         android:layout_marginTop="1dp" />
 
+    <RelativeLayout
+        android:id="@+id/rl_to_recharge"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/space_55"
+        android:layout_marginRight="@dimen/space_14">
+
+        <ImageView
+            android:id="@+id/iv_to_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/icon_19002" />
+
+        <ImageView
+            android:id="@id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/space_5"
+            android:src="@drawable/icon_19001" />
+    </RelativeLayout>
 </RelativeLayout>

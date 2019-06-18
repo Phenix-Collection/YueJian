@@ -2,24 +2,21 @@ package com.mingquan.yuejian.ui;
 
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.mingquan.yuejian.R;
 import com.mingquan.yuejian.YueJianAppAppContext;
 import com.mingquan.yuejian.YueJianAppAppManager;
-import com.mingquan.yuejian.R;
 import com.mingquan.yuejian.base.YueJianAppBaseFullModeActivity;
 import com.mingquan.yuejian.proto.YueJianAppApiProtoHelper;
 import com.mingquan.yuejian.proto.model.YueJianAppACUserPublicInfoModel;
-import com.mingquan.yuejian.ui.view.YueJianAppFullScreenVideoView;
 import com.mingquan.yuejian.utils.YueJianAppAppUtil;
 import com.mingquan.yuejian.utils.YueJianAppStringUtil;
 import com.mingquan.yuejian.utils.YueJianAppTLog;
@@ -41,22 +38,11 @@ import cn.sharesdk.tencent.qq.QQ;
 import cn.sharesdk.wechat.friends.Wechat;
 
 public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeActivity implements PlatformActionListener {
-    private String[] names = {QQ.NAME, Wechat.NAME, SinaWeibo.NAME};
+    @BindView(R.id.tv_wchat)
+    TextView tvWchat;
     private String type;
-    @BindView(R.id.tv_privacy)
-    TextView mTvPrivacy;
-    @BindView(R.id.txv_version)
-    TextView mTvVersion;
     @BindView(R.id.loading_img)
     ImageView mLoadingImg;
-    @BindView(R.id.rl_qq)
-    RelativeLayout mQQ;
-    @BindView(R.id.rl_sina)
-    RelativeLayout mSina;
-    @BindView(R.id.rl_wechat)
-    RelativeLayout mWechat;
-    @BindView(R.id.video_view)
-    YueJianAppFullScreenVideoView mVideoView;
 
     private Context mContext;
 
@@ -73,85 +59,43 @@ public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeAct
     @Override
     public void initView() {
         getSupportActionBar().hide();
-        mTvPrivacy.setOnClickListener(this);
-
-        if (mTvVersion != null) {
-            mTvVersion.setText(String.format("Version %s", YueJianAppAppUtil.getInstance().getAppVersionName(this)));
-        }
     }
 
     @Override
     public void initData() {
         mContext = this;
-        String uri = "android.resource://" + getPackageName() + "/" + R.raw.login_video;
-
-        mVideoView.setVideoURI(Uri.parse(uri));
-        mVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-                mVideoView.start();
-            }
-        });
-        mVideoView.start();
     }
 
     @Override
-    @OnClick({R.id.rl_qq, R.id.rl_sina, R.id.rl_wechat, R.id.rl_mobile, R.id.tv_privacy})
+    @OnClick({R.id.tv_phone, R.id.tv_wchat})
     public void onClick(View v) {
         int id = v.getId();
 
         switch (id) {
-            case R.id.rl_qq:
-                if (YueJianAppUtils.isFastClick())
-                    return;
-                type = "QQ";
-                enableAgainClick(false);
-                otherLogin(names[0]);
-                break;
-            case R.id.rl_sina:
-                if (YueJianAppUtils.isFastClick())
-                    return;
-                type = "WB";
-                enableAgainClick(false);
-                otherLogin(names[2]);
-                break;
-            case R.id.rl_wechat:
+            case R.id.tv_wchat:
                 if (YueJianAppUtils.isFastClick())
                     return;
                 type = "WX";
                 enableAgainClick(false);
-                otherLogin(names[1]);
+                otherLogin();
                 break;
-            case R.id.rl_mobile:
+            case R.id.tv_phone:
                 if (YueJianAppUtils.isFastClick())
                     return;
                 YueJianAppUIHelper.showMobilLogin(this);
                 break;
-            case R.id.tv_privacy:
-                if (YueJianAppUtils.isFastClick()) {
-                    return;
-                }
-                YueJianAppUIHelper.showWebView(
-                        this, YueJianAppAppContext.getInstance().mAgreementUrl, "隐私政策");
-                break;
         }
     }
 
-    private class MyRunnable implements java.lang.Runnable {
+    private class MyRunnable implements Runnable {
 
         @Override
         public void run() {
             Platform plat = null;
             switch (type) {
-                case "QQ":
-                    plat = ShareSDK.getPlatform(QQ.NAME);
-                    break;
-                case "WB":
-                    plat = ShareSDK.getPlatform(SinaWeibo.NAME);
-                    break;
                 case "WX":
                     plat = ShareSDK.getPlatform(Wechat.NAME);
-                    //判断是否安装了微信客户端
+                    // 判断是否安装了微信客户端
                     if (!plat.isClientValid()) {
                         mHandler.sendEmptyMessage(WECHAT_NO_CLIENT);
                         return;
@@ -171,12 +115,10 @@ public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeAct
 
     private MyRunnable mMyRunnable;
 
-    private void otherLogin(String name) {
-        if (mLoadingImg != null) {
-            mLoadingImg.setVisibility(View.VISIBLE);
-            animationDrawable = (AnimationDrawable) mLoadingImg.getBackground();
-            animationDrawable.start();
-        }
+    private void otherLogin() {
+        mLoadingImg.setVisibility(View.VISIBLE);
+        animationDrawable = (AnimationDrawable) mLoadingImg.getBackground();
+        animationDrawable.start();
         if (mMyRunnable == null) {
             mMyRunnable = new MyRunnable();
         }
@@ -256,11 +198,7 @@ public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeAct
     }
 
     private void enableAgainClick(boolean isEnable) {
-        if (mWechat != null) {
-            mWechat.setEnabled(isEnable);
-        }
-//        mSina.setEnabled(isEnable);
-//        mQQ.setEnabled(isEnable);
+        tvWchat.setEnabled(isEnable);
     }
 
     /**
@@ -270,10 +208,8 @@ public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeAct
         if (animationDrawable != null) {
             animationDrawable.stop();
         }
-        if (mLoadingImg != null) {
-            mLoadingImg.clearAnimation();
-            mLoadingImg.setVisibility(View.GONE);
-        }
+        mLoadingImg.clearAnimation();
+        mLoadingImg.setVisibility(View.GONE);
     }
 
     public void onResume() {
@@ -286,7 +222,6 @@ public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeAct
     @Override
     protected void onRestart() {
         super.onRestart();
-        mVideoView.start();
     }
 
     public void onPause() {
@@ -297,7 +232,7 @@ public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeAct
         MobclickAgent.onPause(this);
     }
 
-    private android.os.Handler mHandler = new MyHandler(this);
+    private Handler mHandler = new MyHandler(this);
     private static final int WECHAT_NO_CLIENT = 0;
     private static final int MSG_AUTH_CANCEL = 1;
     private static final int MSG_AUTH_ERROR = 2;
@@ -305,7 +240,7 @@ public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeAct
     private static final int SUCCESS_RESPONSE = 4;
     private static final int ERROR_RESPONSE = 5;
 
-    private static class MyHandler extends android.os.Handler {
+    private static class MyHandler extends Handler {
         private WeakReference<YueJianAppLiveLoginSelectActivity> mWeakReference;
 
         MyHandler(YueJianAppLiveLoginSelectActivity activity) {

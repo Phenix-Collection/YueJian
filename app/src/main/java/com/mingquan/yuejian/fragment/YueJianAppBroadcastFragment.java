@@ -10,10 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mingquan.yuejian.R;
 import com.mingquan.yuejian.adapter.YueJianAppFragmentViewPagerAdapter;
+import com.mingquan.yuejian.ui.dialog.YueJianAppDialogHelper;
 import com.mingquan.yuejian.utils.YueJianAppTDevice;
 import com.mingquan.yuejian.utils.YueJianAppUIHelper;
 import com.mingquan.yuejian.utils.YueJianAppUiUtils;
@@ -39,6 +41,8 @@ public class YueJianAppBroadcastFragment extends Fragment {
     TextView tvOpenNotify;
     @BindView(R.id.ll_notify)
     LinearLayout llNotify;
+    @BindView(R.id.rl_to_recharge)
+    RelativeLayout rlToRecharge;
     private View ret;
     @BindView(R.id.app_indicator)
     RVPIndicator mIndicator;
@@ -59,7 +63,6 @@ public class YueJianAppBroadcastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (ret == null) {
             ret = inflater.inflate(R.layout.yue_jian_app_index_fragment, null, false);
-
         }
         unbind = ButterKnife.bind(this, ret);
 
@@ -111,11 +114,17 @@ public class YueJianAppBroadcastFragment extends Fragment {
         unbind.unbind();
     }
 
-    @OnClick(R.id.home_search)
+    @OnClick({R.id.home_search, R.id.iv_to_recharge, R.id.iv_close})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.home_search:
                 YueJianAppUIHelper.showSearch(mContext);
+                break;
+            case R.id.iv_to_recharge:
+                YueJianAppDialogHelper.showRechargeDialogFragment(getActivity().getSupportFragmentManager());
+                break;
+            case R.id.iv_close:
+                rlToRecharge.setVisibility(View.GONE);
                 break;
         }
     }

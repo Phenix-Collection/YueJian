@@ -35,7 +35,6 @@ import static java.lang.System.setProperty;
  * 应用启动界面
  */
 public class YueJianAppAppStart extends YueJianAppFullScreenModeActivity {
-    private TextView mTxtVersion;
     /**
      * 需要进行检测的权限数组
      */
@@ -51,7 +50,6 @@ public class YueJianAppAppStart extends YueJianAppFullScreenModeActivity {
             return;
         }
         View view = View.inflate(this, R.layout.yue_jian_app_app_start, null);
-        mTxtVersion = (TextView) view.findViewById(R.id.tv_version);
         setContentView(view);
         initData();
     }
@@ -70,7 +68,6 @@ public class YueJianAppAppStart extends YueJianAppFullScreenModeActivity {
      * 获取数据
      */
     private void initData() {
-        mTxtVersion.setText(String.format(getString(R.string.system_version), YueJianAppAppUtil.getInstance().getAppVersionName(this)));
         YueJianAppMySophixApplication.msgDisplayListener = new MyMsgDisplayListener(this);
         SophixManager.getInstance().queryAndLoadNewPatch();
 

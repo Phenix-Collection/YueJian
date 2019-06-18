@@ -162,7 +162,6 @@ allprojects {
 
 dependencies {
     implementation 'com.android.support:support-v4:27.1.1'
-    testImplementation 'junit:junit:4.12'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation('io.socket:socket.io-client:0.7.0') {
         exclude group: 'org.json', module: 'json'

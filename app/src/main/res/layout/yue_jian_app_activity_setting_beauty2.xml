@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".vchat.SettingBeautyActivity2">
+    android:orientation="vertical">
 
     <android.opengl.GLSurfaceView
         android:id="@+id/gl_surface_view2"
@@ -16,7 +14,8 @@
     <RelativeLayout
         android:id="@+id/rl_back"
         android:layout_width="@dimen/space_56"
-        android:layout_height="@dimen/space_56">
+        android:layout_height="@dimen/space_56"
+        android:layout_marginTop="@dimen/space_20">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -42,8 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/space_14"
-                android:drawableLeft="@drawable/yue_jian_app_beauty_01"
+                android:layout_marginStart="@dimen/space_14"
+                android:drawableStart="@drawable/yue_jian_app_beauty_01"
                 android:text="美颜"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_16" />

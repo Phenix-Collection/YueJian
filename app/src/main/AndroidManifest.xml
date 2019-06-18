@@ -74,10 +74,15 @@
         android:hardwareAccelerated="true"
         android:icon="@drawable/yue_jian_app_ic_launcher"
         android:label="@string/app_name"
+        android:resizeableActivity="true"
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:name">
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
 
         <!-- 华为推送相关 start-->
         <meta-data
@@ -179,9 +184,7 @@
 
         <!-- 11为测试 9为正式 -->
 
-
         <!-- <meta-data -->
-
 
         <!-- android:name="com.getsentry.raven.android.DSN" -->
 
@@ -402,7 +405,7 @@
             android:value="0ed38c5498da85dffc1ed67e3ccf089a" />
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="b2eeafd4e9f4161163763fe4736bbae8" />
+            android:value="1a4eb1c0c40959e985479f6452ce3ebf" />
 
         <!-- 友盟统计 57372c8c67e58e5b58005148 -->
         <meta-data
@@ -479,9 +482,6 @@
             android:configChanges="keyboardHidden|orientation"
             android:label="设置价格"
             android:screenOrientation="portrait"
-            android:theme="@style/FullScreenModeTheme" />
-        <activity
-            android:name="com.mingquan.yuejian.vchat.YueJianAppSettingBeautyActivity"
             android:theme="@style/FullScreenModeTheme" />
         <activity
             android:name="com.mingquan.yuejian.vchat.YueJianAppSettingBeautyActivity2"

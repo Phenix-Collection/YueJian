@@ -236,7 +236,7 @@
     <style name="AppStartTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@android:color/transparent</item>
         <item name="colorPrimaryDark">@android:color/transparent</item>
-        <item name="android:windowBackground">@drawable/yue_jian_app_app_start_bg</item>
+        <item name="android:windowBackground">@drawable/yue_jian_app_splash</item>
         <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
     </style>
 
