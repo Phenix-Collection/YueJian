@@ -132,6 +132,7 @@ public class YueJianAppDiamondDialogFragment extends YueJianAppBaseDialogFragmen
                 if (YueJianAppUtils.isFastClick()) {
                     return;
                 }
+                YueJianAppTLog.error("item click %s", position);
                 if (position == 0 || position == mRechargeList.size() + 1 || mSelectedIndex == position - 1) {
                     YueJianAppTLog.error("pos = 0 || size || selectIndex == pos - 1");
                     return;

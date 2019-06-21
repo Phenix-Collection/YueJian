@@ -13,7 +13,6 @@ import com.faceunity.gles.core.GlUtil;
 import com.faceunity.utils.CameraUtils;
 import com.faceunity.utils.FPSUtil;
 import com.mingquan.yuejian.utils.YueJianAppAppUtil;
-import com.mingquan.yuejian.utils.YueJianAppTLog;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -138,7 +137,6 @@ public class YueJianAppCameraRenderer implements Camera.PreviewCallback, GLSurfa
 
     @Override
     public void onDrawFrame(GL10 gl) {
-        YueJianAppTLog.info("camera render on draw frame");
         try {
             mSurfaceTexture.updateTexImage();
             mSurfaceTexture.getTransformMatrix(mtx);
@@ -221,9 +219,9 @@ public class YueJianAppCameraRenderer implements Camera.PreviewCallback, GLSurfa
             e.printStackTrace();
             releaseCamera();
             YueJianAppAppUtil.getInstance().showSystemPermissionsSettingDialog(
-                                    mActivity,
-                                    "需要开启摄像头、音频权限,手动设置？",
-                                    false);
+                    mActivity,
+                    "需要开启摄像头、音频权限,手动设置？",
+                    false);
         }
     }
 

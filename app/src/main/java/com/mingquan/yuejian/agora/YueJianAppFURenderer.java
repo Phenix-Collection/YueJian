@@ -710,7 +710,6 @@ public class YueJianAppFURenderer {
                         beauty.close();
                         mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX] = faceunity.fuCreateItemFromPackage(beautyData);
                         isNeedUpdateFaceBeauty = true;
-                        Log.e(TAG, "face beauty item handle " + mItemsArray[ITEM_ARRAYS_FACE_BEAUTY_INDEX]);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
