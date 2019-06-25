@@ -168,6 +168,7 @@ public class YueJianAppLiveLoginSelectActivity extends YueJianAppBaseFullModeAct
                 new YueJianAppApiProtoHelper.ACLoginWithThirdPartyReqCallback() {
                     @Override
                     public void onError(int errCode, String errMessage) {
+                        YueJianAppTLog.error(errMessage);
                         mHandler.sendEmptyMessage(ERROR_RESPONSE);
                     }
 

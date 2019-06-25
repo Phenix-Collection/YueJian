@@ -89,7 +89,7 @@ public class YueJianAppAliPayDiamondForFragment {
           // 判断resultStatus 为“9000”则代表支付成功，具体状态码代表含义可参考接口文档
           if (TextUtils.equals(resultObj.getResultStatus(), "9000")) {
             YueJianAppAppContext.showToastAppMsg(mPayActivity, "支付成功");
-            mPayFragment.rechargeResult(true, rechargeNum);
+            mPayFragment.rechargeResult(rechargeNum);
             YueJianAppTLog.info("充值数量：%s", rechargeNum);
           } else {
             // 判断resultStatus 为非“9000”则代表可能支付失败

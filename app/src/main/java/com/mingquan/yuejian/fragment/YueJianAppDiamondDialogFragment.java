@@ -305,21 +305,19 @@ public class YueJianAppDiamondDialogFragment extends YueJianAppBaseDialogFragmen
     }
 
     //充值结果
-    public void rechargeResult(boolean isOk, String rechargeMoney) {
-        if (isOk) {
-            if (mDiamond != null) {
-                mDiamond.setText(String.format("%d", Integer.parseInt(mDiamond.getText().toString()) + Integer.parseInt(rechargeMoney)));
-            }
-            Map<String, String> map = new HashMap<>();
-            YueJianAppUserBean user = YueJianAppAppContext.getInstance().getLoginUser();
-            map.put("fromName", user.getUser_nicename());
-            map.put("rechargeMoney", rechargeMoney);
-            map.put("rechargeUser", user.getId() + "");
-            map.put("reportName", user.getUser_nicename());
-            map.put("type", "alipay");
-            MobclickAgent.onEvent(getActivity(), YueJianAppAppConfig.EVENT_RECHARGE, map);
-            requestData();
+    public void rechargeResult(String rechargeMoney) {
+        if (mDiamond != null) {
+            mDiamond.setText(String.format("%d", Integer.parseInt(mDiamond.getText().toString()) + Integer.parseInt(rechargeMoney)));
         }
+        Map<String, String> map = new HashMap<>();
+        YueJianAppUserBean user = YueJianAppAppContext.getInstance().getLoginUser();
+        map.put("fromName", user.getUser_nicename());
+        map.put("rechargeMoney", rechargeMoney);
+        map.put("rechargeUser", user.getId() + "");
+        map.put("reportName", user.getUser_nicename());
+        map.put("type", "alipay");
+        MobclickAgent.onEvent(getActivity(), YueJianAppAppConfig.EVENT_RECHARGE, map);
+        requestData();
     }
 
     private class MyAdapter extends BaseAdapter {
