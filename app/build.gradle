@@ -67,7 +67,7 @@ android {
     }
 
     productFlavors {
-        yj_origin {
+        yq_origin {
             ndk {
                 abiFilter "x86"
                 abiFilter "armeabi-v7a"
@@ -76,7 +76,7 @@ android {
             manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
         }
 
-        huawei {
+        yq_wuxuan {
             ndk {
                 abiFilter "x86"
                 abiFilter "armeabi-v7a"

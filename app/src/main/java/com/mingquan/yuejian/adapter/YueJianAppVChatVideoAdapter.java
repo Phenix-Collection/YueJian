@@ -107,13 +107,6 @@ public class YueJianAppVChatVideoAdapter extends YueJianAppBaseRecyclerMutilAdap
                                     holder.getImageView(R.id.riv_vchat_bg).setImageBitmap(blurBitmap);
                                 }
                             });
-                            /*new Thread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    Bitmap blurBitmap = YueJianAppFastBlurUtil.toBlur(finalBitmap, 10);
-                                    holder.getImageView(R.id.riv_vchat_bg).setImageBitmap(blurBitmap);
-                                }
-                            }).start();*/
                         } else {
                             if (bitmap.getWidth() > bitmap.getHeight()) {
                                 Matrix matrix = new Matrix();

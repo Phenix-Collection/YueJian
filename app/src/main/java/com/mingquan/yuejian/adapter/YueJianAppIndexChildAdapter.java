@@ -35,7 +35,6 @@ public class YueJianAppIndexChildAdapter extends YueJianAppBaseRecyclerMutilAdap
     private YueJianAppLoadingMoreFooter mMoreFooter;
     private ArrayList<String> mImageList = new ArrayList<>();
     private ArrayList<String> mUrlList = new ArrayList<>();
-    private boolean canVideoChat = false;
 
     public YueJianAppLoadingMoreFooter getMoreFooter() {
         return mMoreFooter;
@@ -43,7 +42,6 @@ public class YueJianAppIndexChildAdapter extends YueJianAppBaseRecyclerMutilAdap
 
     public YueJianAppIndexChildAdapter(Context ctx) {
         super(ctx);
-        canVideoChat = YueJianAppAppContext.getInstance().getCanVideoChat();
         mMoreFooter = new YueJianAppLoadingMoreFooter(context, context.getResources().getColor(R.color.gray));
         mMoreFooter.setLayoutParams(
                 new RecyclerView.LayoutParams(
@@ -81,8 +79,6 @@ public class YueJianAppIndexChildAdapter extends YueJianAppBaseRecyclerMutilAdap
                 break;
             case TYPE_COMMON:
                 final int index = mImageList.size() > 0 ? position - 1 : position;
-                holder.getView(R.id.ll_coin_time).setVisibility(canVideoChat ? View.VISIBLE : View.GONE);
-                holder.getView(R.id.status).setVisibility(canVideoChat ? View.VISIBLE : View.GONE);
                 ((YueJianAppMyRatingBar) holder.getView(R.id.rating_bar)).setStar(list.get(index).getStar());
                 YueJianAppBaseApplication.getImageLoaderUtil().loadImage_glide(
                         context,
@@ -91,13 +87,6 @@ public class YueJianAppIndexChildAdapter extends YueJianAppBaseRecyclerMutilAdap
 
                 holder.getTextView(R.id.nick).setText(list.get(index).getName());
 
-                boolean canVideoChat = false;
-                if (YueJianAppAppContext.getInstance().getPrivateInfoModel() != null) {
-                    canVideoChat = YueJianAppAppContext.getInstance().getPrivateInfoModel().getCanVideoChat();
-                }
-                holder.getTextView(R.id.sign).setText(canVideoChat ? list.get(index).getSignature() : "");
-                holder.getView(R.id.ll_coin_time).setVisibility(canVideoChat ? View.VISIBLE : View.GONE);
-                holder.getView(R.id.status).setVisibility(canVideoChat ? View.VISIBLE : View.GONE);
                 holder.getTextView(R.id.tv_coin_time).setText(String.valueOf(list.get(index).getPrice()));
                 holder.getTextView(R.id.tv_user_id).setText(String.format("ID:%s", list.get(index).getUid()));
                 ((YueJianAppStatusTextView) holder.getView(R.id.status)).setStatus(list.get(index).getStatus(), list.get(index).getStatusTag());
@@ -107,6 +96,14 @@ public class YueJianAppIndexChildAdapter extends YueJianAppBaseRecyclerMutilAdap
                         mClickListener.onItemClick(v, index);
                     }
                 });
+                // 动态显示和隐藏
+                boolean canVideoChat = false;
+                if (YueJianAppAppContext.getInstance().getPrivateInfoModel() != null) {
+                    canVideoChat = YueJianAppAppContext.getInstance().getPrivateInfoModel().getCanVideoChat();
+                }
+                holder.getTextView(R.id.sign).setText(canVideoChat ? list.get(index).getSignature() : "");
+                holder.getView(R.id.ll_coin_time).setVisibility(canVideoChat ? View.VISIBLE : View.GONE);
+                holder.getView(R.id.status).setVisibility(canVideoChat ? View.VISIBLE : View.GONE);
                 break;
         }
     }

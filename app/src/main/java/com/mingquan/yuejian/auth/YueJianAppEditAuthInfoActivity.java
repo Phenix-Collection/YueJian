@@ -269,6 +269,7 @@ public class YueJianAppEditAuthInfoActivity extends YueJianAppFullScreenModeActi
                     LocalMedia localMedia = new LocalMedia();
                     localMedia.setCutPath((String) pictureKey.get(i));
                     localMedia.setPictureType("image");
+                    localMedia.setCut(true);
                     selectList.add(localMedia);
                 }
             } catch (JSONException e) {

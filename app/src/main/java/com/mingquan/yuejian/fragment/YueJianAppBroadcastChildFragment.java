@@ -36,6 +36,7 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -353,6 +354,15 @@ public class YueJianAppBroadcastChildFragment extends Fragment {
                         } else if (isLoad) {
                             mAdapter.getMoreFooter().setState(YueJianAppLoadingMoreFooter.STATE_COMPLETE);
                             isLoad = false;
+                            LinkedList<YueJianAppACUserPublicInfoModel> currList = (LinkedList<YueJianAppACUserPublicInfoModel>) mAdapter.getList();
+                            for (int i = 0; i < currList.size(); i++) {
+                                for (int j = 0; j < broadcasts.size(); j++) {
+                                    if (currList.get(i).getUid().equals(broadcasts.get(j).getUid())) {
+                                        YueJianAppTLog.debug("remove uid:%s, name:%s", broadcasts.get(j).getUid(), broadcasts.get(j).getName());
+                                        broadcasts.remove(j);
+                                    }
+                                }
+                            }
                             mAdapter.appendList(broadcasts);
                         } else {
                             mAdapter.setList(broadcasts);

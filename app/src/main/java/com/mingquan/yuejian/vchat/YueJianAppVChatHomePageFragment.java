@@ -209,13 +209,13 @@ public class YueJianAppVChatHomePageFragment extends YueJianAppBaseFragment {
                         if (mUserPrivateInfo.getCanVideoChat()) {
                             YueJianAppUiUtils.setVisibility(rvExtension, View.VISIBLE);
                             YueJianAppUiUtils.setVisibility(llMyCall, View.VISIBLE);
-                            YueJianAppUiUtils.setVisibility(llMyTime, View.VISIBLE);
+//                            YueJianAppUiUtils.setVisibility(llMyTime, View.VISIBLE);
                             YueJianAppUiUtils.setVisibility(llBeauty, View.VISIBLE);
                             YueJianAppUiUtils.setVisibility(llAuth, View.VISIBLE);
                         } else {
                             YueJianAppUiUtils.setVisibility(rvExtension, View.GONE);
                             YueJianAppUiUtils.setVisibility(llMyCall, View.GONE);
-                            YueJianAppUiUtils.setVisibility(llMyTime, View.GONE);
+//                            YueJianAppUiUtils.setVisibility(llMyTime, View.GONE);
                             YueJianAppUiUtils.setVisibility(llBeauty, View.GONE);
                             YueJianAppUiUtils.setVisibility(llAuth, View.GONE);
                         }

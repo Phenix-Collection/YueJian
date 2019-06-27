@@ -32,7 +32,7 @@ public class YueJianAppAppConfig {
             UPLOADAUTHINFO = "http://m.test.tv.lmx0536.cn/apps/authorize/aliauth";
         } else { //线上配置 正式版
 //            MAIN_URL = "https://api2.papatv.net/public/";
-            MAIN_URL = "http://api2.mqnetswork.com/public/";
+            MAIN_URL = "https://api2.mqnetswork.com/public/";
             SIGN = "E^vQAA44U(r6aT7eNWU!HbSP)+ht+fK5!mhebhnJ3E@KddsCzW";
             UPLOADAUTHINFO = "http://m.peppertv.cn/apps/authorize/aliauth";
         }
