@@ -305,14 +305,14 @@ public class YueJianAppUploadVideoActivity extends YueJianAppFullScreenModeActiv
                 }
 
                 if (info != null && info.isOK()) {
-                    toast.setText("video upload success!");
+                    toast.setText("上传成功!");
                     toast.show();
 
                     try {
                         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
                         retriever.setDataSource(path);
                         Bitmap bitmap = retriever.getFrameAtTime();
-                        FileOutputStream outStream = null;
+                        FileOutputStream outStream;
                         final String localThumb = Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + System.currentTimeMillis() + ".jpg";
                         outStream = new FileOutputStream(new File(localThumb));
                         bitmap.compress(Bitmap.CompressFormat.JPEG, 30, outStream);

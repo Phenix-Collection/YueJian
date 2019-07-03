@@ -150,7 +150,7 @@ public class YueJianAppSelectAvatarActivity extends YueJianAppBaseFullModeActivi
                     return;
                 }
                 if (info != null && info.isOK()) {
-                    toast.setText("upload success!");
+                    toast.setText("上传成功!");
                     toast.show();
                     YueJianAppApiProtoHelper.sendACUploadAvatarReq(
                             YueJianAppSelectAvatarActivity.this,

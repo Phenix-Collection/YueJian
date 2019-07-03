@@ -195,23 +195,10 @@ public class YueJianAppSlideShowView extends FrameLayout {
             }
             String imgUrl = (String) imageView.getTag();
             mImageLoaderUtil.loadImageHighDefinite(
-                    context, imgUrl, imageView, new ImageLoadingListener() {
-                        @Override
-                        public void onLoadingStarted(String s, View view) {
-                        }
-
-                        @Override
-                        public void onLoadingFailed(String s, View view, FailReason failReason) {
-                        }
-
-                        @Override
-                        public void onLoadingComplete(String s, View view, Bitmap bitmap) {
-                        }
-
-                        @Override
-                        public void onLoadingCancelled(String s, View view) {
-                        }
-                    });
+                    context,
+                    imgUrl,
+                    imageView,
+                    null);
             ViewGroup viewParent = (ViewGroup) imageView.getParent();
             if (viewParent != null) {
                 viewParent.removeView(imageView);
